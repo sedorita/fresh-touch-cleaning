@@ -1,0 +1,83 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "services"
+    label: "Services"
+    files:
+      - label: "Service Areas"
+        name: "service_areas"
+        file: "content/services.json"
+        format: "json"
+        fields:
+          - label: "Areas"
+            name: "areas"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Image", name: "image", widget: "string" }
+
+              - label: "Notes"
+                name: "notes"
+                widget: "list"
+                field: { label: "Note", name: "note", widget: "string" }
+
+              - label: "Categories"
+                name: "categories"
+                widget: "object"
+                fields:
+                  - label: "General"
+                    name: "general"
+                    widget: "list"
+                    summary: "{{fields.text}}"
+                    fields: &pick_fields
+                      - { label: "Pick ID", name: "pick", widget: "string" }
+                      - { label: "Text", name: "text", widget: "string" }
+                      - { label: "Preview MP4", name: "previewMp4", widget: "string" }
+
+                  - label: "Deep"
+                    name: "deep"
+                    widget: "list"
+                    summary: "{{fields.text}}"
+                    fields: *pick_fields
+
+                  - label: "Detailed"
+                    name: "detailed"
+                    widget: "list"
+                    summary: "{{fields.text}}"
+                    fields: *pick_fields
+
+                  - label: "Move-In"
+                    name: "move-in"
+                    widget: "list"
+                    summary: "{{fields.text}}"
+                    fields: *pick_fields
+
+                  - label: "Move-Out"
+                    name: "move-out"
+                    widget: "list"
+                    summary: "{{fields.text}}"
+                    fields: *pick_fields
+
+                  - label: "Post"
+                    name: "post"
+                    widget: "list"
+                    required: false
+                    summary: "{{fields.text}}"
+                    fields: *pick_fields
+
+                  - label: "Carpet"
+                    name: "carpet"
+                    widget: "list"
+                    required: false
+                    summary: "{{fields.text}}"
+                    fields: *pick_fields

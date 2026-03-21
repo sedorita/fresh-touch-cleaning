@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta encoding="UTF-8"> 
+    <meta name="viewport" content="width = viewport-width, intial-scale=1.0"> 
+    <title> Fresh Touch Cleaning Service</title>
+    <meta name="description" content="Weekly, deep, and move-out cleaning. Quick estimate and fast booking.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+
+    <!--Sticky Top Nav-->
+    <div class="nav-site">
+      <div class="brand" >
+        <div>
+        <a href="#home" class="brand__name">Fresh Touch</a></div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#home" class="nav__link">Home</a>
+        <a href="#services" class="nav__link">Plans / Services</a>
+        <a href="#about" class="nav__link">About</a>
+        <a href="#contact" class="nav__link">Contact</a>
+        <a href="#work" class="nav__link">Recent Work</a>
+        <a href="#blog" class="nav__link">Blog</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn--ghost" id="estimateBtn" type="button">Quick Estimate</button>
+        <a class="btn btn--ghost" href="tel:+12045551234" aria-label="Call us">
+          Call us: (204) 555-1234
+        </a>
+        <button class="btn btn--solid" id="loginBtn" type="button">Login</button>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <header class="hero" role="banner" id="home">
+      <div class="hero__overlay"></div>
+
+
+
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" type="button">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <a href="#home" class="mobile-menu__link">Home</a>
+        <a href="#services" class="mobile-menu__link">Plans / Services</a>
+        <a href="#about" class="mobile-menu__link">About</a>
+        <a href="#contact" class="mobile-menu__link">Contact</a>
+        <a href="#work" class="mobile-menu__link">Recent Work</a>
+        <div class="mobile-menu__actions">
+          <button class="btn btn--ghost" id="estimateBtnMobile" type="button">Quick Estimate</button>
+          <a class="btn btn--ghost" href="tel:+12045551234">Call Candy</a>
+          <button class="btn btn--solid" id="loginBtnMobile" type="button">Login</button>
+        </div>
+      </div>
+
+      <!-- Left Social Rail -->
+      <aside class="social-rail" aria-label="Social links">
+        <a class="social-rail__icon" href="#" aria-label="Facebook" title="Facebook">
+          <!-- simple svg icon -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3H13.5V9.1c0-.9.3-1.5 1.6-1.5h1.7V4.9c-.3 0-1.4-.1-2.7-.1-2.7 0-4.6 1.6-4.6 4.6V11H7v3h2.5v8h4z"/></svg>
+        </a>
+        <a class="social-rail__icon" href="#" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm10 2H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm-5 4.5A5.5 5.5 0 1 1 6.5 14 5.5 5.5 0 0 1 12 8.5zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5zM18 6.8a1.2 1.2 0 1 1-1.2-1.2A1.2 1.2 0 0 1 18 6.8z"/></svg>
+        </a>
+        <a class="social-rail__icon" href="#" aria-label="TikTok" title="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3c.5 3.4 2.5 5.4 5 6v2.8c-2 0-3.6-.6-5-1.6V16a5 5 0 1 1-5-5c.4 0 .8 0 1.2.1V14a2.3 2.3 0 1 0 1.3 2.1V3h2.5z"/></svg>
+        </a>
+      </aside>
+
+      <!-- Center Title -->
+      <div class="hero__content" id="hero_content">
+        <h1 class="hero__title">Fresh Touch Cleaning</h1>
+        <p class="hero__subtitle">Recreating A magic space that last</p>
+      </div>
+
+      <!-- Bottom-right chat -->
+      <button class="chat-fab" id="chatFab" type="button" aria-expanded="false">
+        Let’s Chat!
+      </button>
+
+      <section class="chat-widget" id="chatWidget" aria-hidden="true" aria-label="Chat widget">
+        <div class="chat-widget__header">
+          <div>
+            <div class="chat-widget__title">Chat with us</div>
+            <div class="chat-widget__sub">Typically replies fast</div>
+          </div>
+          <button class="icon-btn" id="chatClose" type="button" aria-label="Close chat">✕</button>
+        </div>
+        <div class="chat-widget__body" id="chatBody">
+          <div class="chat-bubble chat-bubble--them">
+            Hi! What kind of remodel are you thinking about?
+          </div>
+        </div>
+        <form class="chat-widget__input" id="chatForm">
+          <input id="chatInput" type="text" placeholder="Type a message..." autocomplete="off"/>
+          <button class="btn btn--solid" type="submit">Send</button>
+        </form>
+      </section>
+    </header>
+
+    <!-- Quick Estimate Modal -->
+    <div class="modal" id="estimateModal" aria-hidden="true" role="dialog" aria-label="Quick estimate">
+      <div class="modal__backdrop" data-close="true"></div>
+      <div class="modal__card" role="document">
+        <div class="modal__header">
+          <h2>Quick Estimate</h2>
+          <button class="icon-btn" id="estimateClose" type="button" aria-label="Close estimate">✕</button>
+        </div>
+
+        <p class="muted">
+          This gives a <strong>price range</strong> (not a final quote). Pick a project and size.
+        </p>
+
+        <div class="grid">
+          <label class="field">
+            <span>Project type</span>
+            <select id="projectType">
+              <option value="kitchen">Kitchen remodel</option>
+              <option value="bathroom">Bathroom remodel</option>
+              <option value="basement">Basement finishing</option>
+              <option value="flooring">Flooring</option>
+              <option value="painting">Painting</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span>Project size</span>
+            <select id="projectSize">
+              <option value="small">Small</option>
+              <option value="medium" selected>Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="estimate-result" id="estimateResult">
+          Estimated range: <strong>$—</strong>
+        </div>
+
+        <div class="modal__footer">
+          <button class="btn btn--ghost" id="estimateRecalc" type="button">Recalculate</button>
+          <a class="btn btn--solid" href="#contact" id="estimateToContact">Contact us</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-spacer"></div>
+    <!-- Sections (placeholders) -->
+    <main class="page">
+      <section id="services" class="section">
+        <h2>Plans / Services</h2>
+
+        <!-- HYBRID TABS:
+            - Real links for SEO + shareable URLs
+            - JS will intercept clicks to switch instantly without reload
+        -->
+        <nav class="service-tabs" aria-label="Cleaning service types">
+            <a class="service-tab is-active"
+                href="/services/general-cleaning.html"
+                data-category="general"
+                aria-current="page">General</a>
+
+            <a class="service-tab"
+                href="/services/deep-cleaning.html"
+                data-category="deep">Deep</a>
+
+            <a class="service-tab"
+                href="/services/detailed-cleaning.html"
+                data-category="detailed">Detailed</a>
+
+            <a class="service-tab"
+                href="/services/move-in-cleaning.html"
+                data-category="move-in">Move-In</a>
+
+            <a class="service-tab"
+                href="/services/move-out-cleaning.html"
+                data-category="move-out">Move-Out</a>
+
+            <a class="service-tab"
+                href="/services/post-construction-cleaning.html"
+                data-category="post">Post-Construction</a>
+
+            <a class="service-tab"
+                href="/services/carpet-upholstery.html"
+                data-category="carpet">Carpet & Upholstery</a>
+        </nav>
+
+        <!-- Optional: quick description that updates with the active tab -->
+        <p class="muted" id="serviceIntro">
+        Choose a service type, then select items for Kitchen, Washrooms, and Rooms.
+        </p>
+
+        <!-- 3 CARDS ONLY: Kitchen / Washrooms / Rooms -->
+<!-- 3 CARDS ONLY: Kitchen / Washrooms / Rooms -->
+<div class="area-grid" id="areaGrid" aria-label="Area selection">
+
+ <!-- Kitchen -->
+  <article class="area-card" data-area="kitchen">
+    <div class="area-card__media" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=500&q=60" alt="" />
+    </div>
+
+    <div class="area-card__body">
+      <header class="area-card__header">
+        <h3 class="area-card__title">Kitchen</h3>
+        <p class="area-card__subtitle muted">Pick what you want done in this area.</p>
+      </header>
+
+
+
+      <!-- General -->
+      <ul class="pick-list" data-category-list="general">
+        <li><button class="pick" type="button" data-pick="kitchen-clear-counters"
+          data-preview-mp4="/previews/kitchen/General_wipe_counter_top.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Clear small clutter from counters (as agreed)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-counters"
+          data-preview-mp4="/previews/kitchen/General_counter_top_wiped.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Counters wiped + sanitized</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-backsplash-light"
+          data-preview-mp4="/previews/kitchen/BlackSplash%20video.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Backsplash wiped (light)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-cabinet-faces-spot"
+          data-preview-mp4="/previews/kitchen/General-cleaning_cabinets.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Cabinet faces/handles spot-cleaned (fingerprints)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-sink"
+          data-preview-mp4="/previews/kitchen/General-cleaning_Sink%26faucet.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Sink + faucet polished</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-stove"
+          data-preview-mp4="/previews/kitchen/General-cleaning_stovetop-cleaned.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Stovetop cleaned (light)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-microwave-exterior"
+          data-preview-mp4="/previews/kitchen/General-cleaning_microwave.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Microwave exterior wiped</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-small-appliances"
+          data-preview-mp4="/previews/kitchen/General_counter_top_wiped.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Small appliances exterior wiped (if on counter)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-table-chairs"
+          data-preview-mp4="/previews/kitchen/General_counter_top_wiped.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Table + chairs wiped</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-wall-spot-general"
+          data-preview-mp4="/previews/kitchen/General-cleaning_Kitchen-Wall.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Spot clean wall marks (light, near cooking areas)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-trash"
+          data-preview-mp4="/previews/kitchen/General-cleaning_Kitchen-Wall.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Empty garbage + replace liner (if available)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-floor-vac"
+          data-preview-mp4="/previews/kitchen/General-cleaning_kitchen-vaccum-floor.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Sweep/vacuum floor edges + main floor</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-floor-mop"
+          data-preview-mp4="/previews/kitchen/General-cleaning_kitchen_mopfloor2.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Mop floor (or spot mop if needed)</span></button></li>
+      </ul>
+
+      <!-- Deep -->
+      <ul class="pick-list is-hidden" data-category-list="deep">
+        <li><button class="pick" type="button" data-pick="kitchen-deep-stove"
+          data-preview-mp4="/previews/kitchen/General-oventop_scrubbing-showed.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Degrease stovetop + knobs</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-inside-microwave"
+          data-preview-mp4="/previews/kitchen/Deep-cleaning_microwave.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Inside microwave cleaned</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-backsplash"
+          data-preview-mp4="/previews/kitchen/BlackSplash%20video.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Backsplash scrubbed (stuck splatter)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-cabinet-faces-deep"
+          data-preview-mp4="/previews/kitchen/General-cleaning_cabinets.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Cabinet faces cleaned more thoroughly (grease around handles)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-baseboards-deep"
+          data-preview-mp4="/previews/kitchen/General-cleaning_Kitchen-Wall2%28picked%29.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Baseboards wiped (kitchen)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-doors-frames"
+          data-preview-mp4="/previews/kitchen/General-cleaning_Kitchen-Wall2%28picked%29.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Door/door frame wipe (light)</span></button></li>
+      </ul>
+
+      <!-- Detailed -->
+      <ul class="pick-list is-hidden" data-category-list="detailed">
+        <li><button class="pick" type="button" data-pick="kitchen-cabinet-edges"
+          data-preview-mp4="/previews/kitchen/Cabinet%20video.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Cabinet faces detailed (edges + grooves)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-handles-detail"
+          data-preview-mp4="/previews/kitchen/General-cleaning_cabinets.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Cabinet handles detailed</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-appliance-fronts"
+          data-preview-mp4="/previews/kitchen/General_oven_top.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Appliance fronts detailed (fridge/stove front)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-sink-crevices"
+          data-preview-mp4="/previews/kitchen/General-cleaning_Sink%26faucet.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Corners/crevices around sink detailed</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-switches-handles"
+          data-preview-mp4="/previews/kitchen/General-cleaning_Kitchen-Wall.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Light switches + door handles wiped</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-vents"
+          data-preview-mp4="/previews/kitchen/General-cleaning_Kitchen-Wall2%28picked%29.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Vents detailed (wipe vs remove)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-baseboards"
+          data-preview-mp4="/previews/kitchen/General-cleaning_Kitchen-Wall2%28picked%29.mp4">
+          <span class="dot" aria-hidden="true"></span><span class="pick__text">Baseboards hand-wiped</span></button></li>
+      </ul>
+
+      <!-- Move-In -->
+      <ul class="pick-list is-hidden" data-category-list="move-in">
+        <li><button class="pick" type="button" data-pick="kitchen-movein-ready"
+          data-preview-mp4="/previews/kitchen/General_counter_top_wiped.mp4">
+          <span class="dot"></span><span class="pick__text">Move-in ready wipe-down + sanitize</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-sink-disinfect"
+          data-preview-mp4="/previews/kitchen/General-cleaning_Sink%26faucet.mp4">
+          <span class="dot"></span><span class="pick__text">Sink disinfected (sanitary wipe)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-cabinet-in"
+          data-preview-mp4="/previews/kitchen/General-cleaning_cabinets.mp4">
+          <span class="dot"></span><span class="pick__text">Inside cabinets (light wipe, empty)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-fridge-front"
+          data-preview-mp4="/previews/kitchen/General_counter_top_wiped.mp4">
+          <span class="dot"></span><span class="pick__text">Fridge exterior cleaned</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-floor-mop-movein"
+          data-preview-mp4="/previews/kitchen/General-cleaning_kitchen_mopfloor3%28picked%29.mp4">
+          <span class="dot"></span><span class="pick__text">Floors vacuum/sweep + mop thoroughly</span></button></li>
+      </ul>
+
+      <!-- Move-Out -->
+      <ul class="pick-list is-hidden" data-category-list="move-out">
+        <li><button class="pick" type="button" data-pick="kitchen-moveout-ready"
+          data-preview-mp4="/previews/kitchen/General-cleaning_Kitchen-Wall.mp4">
+          <span class="dot"></span><span class="pick__text">Move-out turnover clean (inspection focus)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-inside-microwave-moveout"
+          data-preview-mp4="/previews/kitchen/General-cleaning_microwave.mp4">
+          <span class="dot"></span><span class="pick__text">Inside microwave cleaned (empty)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-cabinets-inside"
+          data-preview-mp4="/previews/kitchen/General-cleaning_cabinets.mp4">
+          <span class="dot"></span><span class="pick__text">Inside cabinets/drawers wiped (empty)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-inside-oven"
+          data-preview-mp4="/previews/kitchen/General_oven_top.mp4">
+          <span class="dot"></span><span class="pick__text">Inside oven (as booked)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-inside-fridge"
+          data-preview-mp4="/previews/kitchen/General_oven_top.mp4">
+          <span class="dot"></span><span class="pick__text">Inside fridge (as booked)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-walls-spot"
+          data-preview-mp4="/previews/kitchen/General-cleaning_Kitchen-Wall2%28picked%29.mp4">
+          <span class="dot"></span><span class="pick__text">Wall spot-cleaning (traffic areas)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="kitchen-floor-moveout"
+          data-preview-mp4="/previews/kitchen/General-cleaning_kitchen_mopfloor2.mp4">
+          <span class="dot"></span><span class="pick__text">Floors vacuum/sweep + mop thoroughly (edges)</span></button></li>
+      </ul>
+
+    </div>
+  </article>
+
+  <!-- Washrooms -->
+  <article class="area-card" data-area="washrooms">
+    <div class="area-card__media" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&q=60" alt="" />
+    </div>
+
+    <div class="area-card__body">
+      <header class="area-card__header">
+        <h3 class="area-card__title">Washrooms</h3>
+        <p class="area-card__subtitle muted">Pick what you want done in this area.</p>
+      </header>
+
+      <!-- General -->
+      <ul class="pick-list" data-category-list="general">
+        <li><button class="pick" type="button" data-pick="bath-counter-sanitize" data-preview-mp4="/previews/bath-counter-sanitize.mp4">
+          <span class="dot"></span><span class="pick__text">Countertop wiped + sanitized</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-sink" data-preview-mp4="/previews/bath-sink.mp4">
+          <span class="dot"></span><span class="pick__text">Sink + faucet cleaned</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-mirror" data-preview-mp4="/previews/bath-mirror.mp4">
+          <span class="dot"></span><span class="pick__text">Mirror streak-free</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-toilet" data-preview-mp4="/previews/bath-toilet.mp4">
+          <span class="dot"></span><span class="pick__text">Toilet cleaned + sanitized</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-shower-light" data-preview-mp4="/previews/bath-shower-light.mp4">
+          <span class="dot"></span><span class="pick__text">Tub/shower wiped (light)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-cabinet-spot" data-preview-mp4="/previews/bath-cabinet-spot.mp4">
+          <span class="dot"></span><span class="pick__text">Cabinet faces/handles spot-cleaned</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-trash" data-preview-mp4="/previews/trash-bag.mp4">
+          <span class="dot"></span><span class="pick__text">Empty trash + replace liner (if available)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-tidy" data-preview-mp4="/previews/bath-tidy.mp4">
+          <span class="dot"></span><span class="pick__text">Quick tidy (align items, fold towels)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-floor-vac" data-preview-mp4="/previews/bath-floor-vac.mp4">
+          <span class="dot"></span><span class="pick__text">Sweep/vacuum floor</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-floor-mop" data-preview-mp4="/previews/bath-floor-mop.mp4">
+          <span class="dot"></span><span class="pick__text">Mop floor</span></button></li>
+      </ul>
+
+      <!-- Deep -->
+      <ul class="pick-list is-hidden" data-category-list="deep">
+        <li><button class="pick" type="button" data-pick="bath-shower-wall" data-preview-mp4="/previews/bath-shower.mp4">
+          <span class="dot"></span><span class="pick__text">Tub/shower scrubbed (corners + buildup)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-grout" data-preview-mp4="/previews/bath-grout.mp4">
+          <span class="dot"></span><span class="pick__text">Grout/edges scrubbed (light where buildup shows)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-behind-toilet" data-preview-mp4="/previews/bath-behind-toilet.mp4">
+          <span class="dot"></span><span class="pick__text">Around/behind toilet cleaned (as reachable)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-faucet-base" data-preview-mp4="/previews/bath-faucet-base.mp4">
+          <span class="dot"></span><span class="pick__text">Faucet base + drain area detailed</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-baseboards" data-preview-mp4="/previews/bath-baseboards.mp4">
+          <span class="dot"></span><span class="pick__text">Baseboards hand-wiped</span></button></li>
+      </ul>
+
+      <!-- Detailed -->
+      <ul class="pick-list is-hidden" data-category-list="detailed">
+        <li><button class="pick" type="button" data-pick="bath-tracks" data-preview-mp4="/previews/bath-tracks.mp4">
+          <span class="dot"></span><span class="pick__text">Shower door tracks detailed</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-polish-chrome" data-preview-mp4="/previews/bath-polish.mp4">
+          <span class="dot"></span><span class="pick__text">Polish chrome fixtures (finish)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-toilet-hinges" data-preview-mp4="/previews/bath-toilet-hinges.mp4">
+          <span class="dot"></span><span class="pick__text">Toilet hinges + tight areas detailed</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-vents" data-preview-mp4="/previews/bath-vents.mp4">
+          <span class="dot"></span><span class="pick__text">Vent detailing (wipe vs remove)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-under-rim" data-preview-mp4="/previews/bath-under-rim.mp4">
+          <span class="dot"></span><span class="pick__text">Under-rim detailing</span></button></li>
+      </ul>
+
+      <!-- Move-In -->
+      <ul class="pick-list is-hidden" data-category-list="move-in">
+        <li><button class="pick" type="button" data-pick="bath-movein-reset" data-preview-mp4="/previews/bath-movein.mp4">
+          <span class="dot"></span><span class="pick__text">Move-in reset cleaning + sanitize</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-cabinet-in" data-preview-mp4="/previews/bath-vanity-inside.mp4">
+          <span class="dot"></span><span class="pick__text">Inside vanity/drawers (light wipe, empty)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-finish" data-preview-mp4="/previews/bath-finish.mp4">
+          <span class="dot"></span><span class="pick__text">Final polish finish</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-floor-movein" data-preview-mp4="/previews/bath-floor-mop.mp4">
+          <span class="dot"></span><span class="pick__text">Floors sweep/vac + mop thoroughly</span></button></li>
+      </ul>
+
+      <!-- Move-Out -->
+      <ul class="pick-list is-hidden" data-category-list="move-out">
+        <li><button class="pick" type="button" data-pick="bath-moveout-detail" data-preview-mp4="/previews/bath-moveout.mp4">
+          <span class="dot"></span><span class="pick__text">Move-out detailing (inspection focus)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-vanity-inside-empty" data-preview-mp4="/previews/bath-vanity-inside.mp4">
+          <span class="dot"></span><span class="pick__text">Inside vanity/drawers wiped (empty)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-walls-spot" data-preview-mp4="/previews/bath-wall-spot.mp4">
+          <span class="dot"></span><span class="pick__text">Wall spot-cleaning</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="bath-inspection" data-preview-mp4="/previews/bath-inspection.mp4">
+          <span class="dot"></span><span class="pick__text">Inspection-ready finish</span></button></li>
+      </ul>
+
+      <!-- Post -->
+      <ul class="pick-list is-hidden" data-category-list="post">
+        <li><button class="pick" type="button" data-pick="bath-dust-control" data-preview-mp4="/previews/post-dust.mp4">
+          <span class="dot"></span><span class="pick__text">Construction dust wipe-down</span></button></li>
+        <li><button class="pick" type="button" data-pick="bath-fine-dust" data-preview-mp4="/previews/post-fine-dust.mp4">
+          <span class="dot"></span><span class="pick__text">Fine dust finishing</span></button></li>
+        <li><button class="pick" type="button" data-pick="bath-edges" data-preview-mp4="/previews/post-edges.mp4">
+          <span class="dot"></span><span class="pick__text">Edges/trim wiped</span></button></li>
+      </ul>
+
+      <!-- Carpet -->
+      <ul class="pick-list is-hidden" data-category-list="carpet">
+        <li><button class="pick" type="button" data-pick="bath-mat-spot" data-preview-mp4="/previews/carpet-mat-spot.mp4">
+          <span class="dot"></span><span class="pick__text">Bath mat spot-treatment</span></button></li>
+        <li><button class="pick" type="button" data-pick="bath-upholstery" data-preview-mp4="/previews/upholstery.mp4">
+          <span class="dot"></span><span class="pick__text">Upholstery add-on (as booked)</span></button></li>
+        <li><button class="pick" type="button" data-pick="bath-deodorize" data-preview-mp4="/previews/deodorize.mp4">
+          <span class="dot"></span><span class="pick__text">Deodorize (as available)</span></button></li>
+      </ul>
+
+      <div class="card-notes">
+        <p class="note">✅ We use fresh/clean towels per home.</p>
+        <p class="note">✅ Color-coded towels help reduce cross-contamination risk.</p>
+      </div>
+    </div>
+  </article>
+
+
+  <!-- Rooms -->
+  <article class="area-card" data-area="rooms">
+    <div class="area-card__media" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=500&q=60" alt="" />
+    </div>
+
+    <div class="area-card__body">
+      <header class="area-card__header">
+        <h3 class="area-card__title">Rooms</h3>
+        <p class="area-card__subtitle muted">Pick what you want done in this area.</p>
+      </header>
+
+
+      <!-- General -->
+      <ul class="pick-list" data-category-list="general">
+        <li><button class="pick" type="button" data-pick="rooms-dusting" data-preview-mp4="/previews/rooms-dusting.mp4">
+          <span class="dot"></span><span class="pick__text">Dust accessible surfaces (tables, shelves, ledges)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-electronics-dust" data-preview-mp4="/previews/rooms-electronics.mp4">
+          <span class="dot"></span><span class="pick__text">Dust electronics lightly (TV stand/console)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-high-touch" data-preview-mp4="/previews/rooms-high-touch.mp4">
+          <span class="dot"></span><span class="pick__text">Wipe high-touch points (handles/switches if included)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-tidy" data-preview-mp4="/previews/rooms-tidy.mp4">
+          <span class="dot"></span><span class="pick__text">Tidy / straighten (pillows, blankets, light reset)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-glass-spot" data-preview-mp4="/previews/rooms-glass.mp4">
+          <span class="dot"></span><span class="pick__text">Spot clean glass/mirrors (fingerprints)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-vac" data-preview-mp4="/previews/rooms-vacuum.mp4">
+          <span class="dot"></span><span class="pick__text">Vacuum carpets/rugs (including edges when possible)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-sweep" data-preview-mp4="/previews/rooms-sweep.mp4">
+          <span class="dot"></span><span class="pick__text">Sweep hard floors</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-mop" data-preview-mp4="/previews/rooms-mop.mp4">
+          <span class="dot"></span><span class="pick__text">Mop hard floors (or spot mop)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-trash" data-preview-mp4="/previews/trash-bag.mp4">
+          <span class="dot"></span><span class="pick__text">Empty small trash bins (if present)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-final-reset" data-preview-mp4="/previews/rooms-final-reset.mp4">
+          <span class="dot"></span><span class="pick__text">Final reset (neat finish)</span></button></li>
+      </ul>
+
+      <!-- Deep -->
+      <ul class="pick-list is-hidden" data-category-list="deep">
+        <li><button class="pick" type="button" data-pick="rooms-high-dust" data-preview-mp4="/previews/rooms-high-dust.mp4">
+          <span class="dot"></span><span class="pick__text">Dust higher surfaces (reachable with duster)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-baseboards" data-preview-mp4="/previews/rooms-baseboards.mp4">
+          <span class="dot"></span><span class="pick__text">Baseboards hand-wiped</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-doors" data-preview-mp4="/previews/rooms-doors.mp4">
+          <span class="dot"></span><span class="pick__text">Doors + handles wiped</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-window-sill" data-preview-mp4="/previews/rooms-sills.mp4">
+          <span class="dot"></span><span class="pick__text">Window sills/ledges cleaned (interior surface)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-vac-edges" data-preview-mp4="/previews/rooms-vac-edges.mp4">
+          <span class="dot"></span><span class="pick__text">Vacuum edges more thoroughly</span></button></li>
+      </ul>
+
+      <!-- Detailed -->
+      <ul class="pick-list is-hidden" data-category-list="detailed">
+        <li><button class="pick" type="button" data-pick="rooms-trim-detailed" data-preview-mp4="/previews/rooms-trim-detailed.mp4">
+          <span class="dot"></span><span class="pick__text">Trim/baseboards detailed (touch every line)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-switches-handles" data-preview-mp4="/previews/rooms-switches.mp4">
+          <span class="dot"></span><span class="pick__text">High-touch points detailed (switches/handles)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-sills-detailed" data-preview-mp4="/previews/rooms-sills.mp4">
+          <span class="dot"></span><span class="pick__text">Window sills detailed</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-vents" data-preview-mp4="/previews/rooms-vents.mp4">
+          <span class="dot"></span><span class="pick__text">Vents detailed (wipe vs remove)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-tracks" data-preview-mp4="/previews/rooms-tracks.mp4">
+          <span class="dot"></span><span class="pick__text">Closet/door tracks detailed</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-corners" data-preview-mp4="/previews/rooms-corners.mp4">
+          <span class="dot"></span><span class="pick__text">Corners/edges detailed</span></button></li>
+      </ul>
+
+      <!-- Move-In -->
+      <ul class="pick-list is-hidden" data-category-list="move-in">
+        <li><button class="pick" type="button" data-pick="rooms-movein-reset" data-preview-mp4="/previews/rooms-movein.mp4">
+          <span class="dot"></span><span class="pick__text">Move-in reset clean (ready-to-live)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-closet-light" data-preview-mp4="/previews/rooms-closet.mp4">
+          <span class="dot"></span><span class="pick__text">Inside closets (light wipe, empty)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-floor-movein" data-preview-mp4="/previews/rooms-mop.mp4">
+          <span class="dot"></span><span class="pick__text">Floors vacuum/sweep + mop thoroughly</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-final" data-preview-mp4="/previews/rooms-final.mp4">
+          <span class="dot"></span><span class="pick__text">Final touch-up</span></button></li>
+      </ul>
+
+      <!-- Move-Out -->
+      <ul class="pick-list is-hidden" data-category-list="move-out">
+        <li><button class="pick" type="button" data-pick="rooms-moveout-detail" data-preview-mp4="/previews/rooms-moveout.mp4">
+          <span class="dot"></span><span class="pick__text">Move-out detailing (turnover/inspection)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-baseboards-moveout" data-preview-mp4="/previews/rooms-baseboards.mp4">
+          <span class="dot"></span><span class="pick__text">Baseboards wiped (visible dirt lines)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-walls-spot" data-preview-mp4="/previews/rooms-walls.mp4">
+          <span class="dot"></span><span class="pick__text">Wall spot-cleaning (traffic areas)</span></button></li>
+
+        <li><button class="pick" type="button" data-pick="rooms-inspection" data-preview-mp4="/previews/rooms-inspection.mp4">
+          <span class="dot"></span><span class="pick__text">Inspection-ready finish</span></button></li>
+      </ul>
+
+      <!-- Post -->
+      <ul class="pick-list is-hidden" data-category-list="post">
+        <li><button class="pick" type="button" data-pick="rooms-dust-control" data-preview-mp4="/previews/post-dust.mp4">
+          <span class="dot"></span><span class="pick__text">Construction dust wipe-down</span></button></li>
+        <li><button class="pick" type="button" data-pick="rooms-fine-dust" data-preview-mp4="/previews/post-fine-dust.mp4">
+          <span class="dot"></span><span class="pick__text">Fine dust finishing</span></button></li>
+        <li><button class="pick" type="button" data-pick="rooms-trim" data-preview-mp4="/previews/post-trim.mp4">
+          <span class="dot"></span><span class="pick__text">Trim/edges wiped</span></button></li>
+      </ul>
+
+      <!-- Carpet -->
+      <ul class="pick-list is-hidden" data-category-list="carpet">
+        <li><button class="pick" type="button" data-pick="rooms-carpet-spot" data-preview-mp4="/previews/carpet-spot.mp4">
+          <span class="dot"></span><span class="pick__text">Carpet spot-treatment</span></button></li>
+        <li><button class="pick" type="button" data-pick="rooms-couch" data-preview-mp4="/previews/upholstery-couch.mp4">
+          <span class="dot"></span><span class="pick__text">Couch/sofa refresh</span></button></li>
+        <li><button class="pick" type="button" data-pick="rooms-deodorize" data-preview-mp4="/previews/deodorize.mp4">
+          <span class="dot"></span><span class="pick__text">Deodorize (as available)</span></button></li>
+      </ul>
+
+      <div class="card-notes">
+        <p class="note">✅ We use fresh/clean towels per home.</p>
+        <p class="note">✅ Color-coded towels help reduce cross-contamination risk.</p>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+        <div class="service-summary">
+        <div class="muted">Selected:</div>
+        <div id="selectedServices" class="service-summary__value">None</div>
+        </div>
+      </section>
+
+            <!-- In-card preview -->
+      <div class="services-preview" id="servicesPreview" aria-hidden="true">
+        <div class="services-preview__label">Preview</div>
+        <video
+          class="services-preview__video"
+          id="servicesPreviewVideo"
+          muted
+          loop
+          playsinline
+          preload="none"
+        ></video>
+      </div>
+
+      <section id="work" class="section">
+.0        <div class="section-head">
+          <div>
+            <h2>Recent Work</h2>
+            <p class="muted">Real before/after snapshots (tap a card to enlarge).</p>
+          </div>
+
+          <div class="chip-row" role="tablist" aria-label="Recent work filters">
+            <button class="chip is-active" type="button" data-work-filter="all" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-work-filter="regular" aria-pressed="false">Regular</button>
+            <button class="chip" type="button" data-work-filter="deep" aria-pressed="false">Deep</button>
+            <button class="chip" type="button" data-work-filter="move-out" aria-pressed="false">Move-Out</button>
+          </div>
+        </div>
+
+        <div class="work-grid" id="workGrid">
+          <!-- Card 1 -->
+          <article class="work-card" data-work-tag="deep">
+            <div class="work-media">
+              <div class="work-media__half">
+                <div class="work-media__label">Before</div>
+                <img src="https://images.unsplash.com/photo-1581579185169-7b76b9948b56?auto=format&fit=crop&w=900&q=60" alt="Before cleaning - kitchen surface" />
+              </div>
+              <div class="work-media__half">
+                <div class="work-media__label">After</div>
+                <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=60" alt="After cleaning - kitchen surface" />
+              </div>
+            </div>
+
+            <div class="work-body">
+              <div class="work-top">
+                <span class="badge">Deep</span>
+                <span class="muted work-meta">Kitchen • 2 hrs</span>
+              </div>
+              <h3 class="work-title">Grease reset + shine finish</h3>
+              <p class="muted work-desc">Counters sanitized, sink polished, backsplash scrubbed.</p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="work-card" data-work-tag="move-out">
+            <div class="work-media">
+              <div class="work-media__half">
+                <div class="work-media__label">Before</div>
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=60" alt="Before cleaning - bathroom" />
+              </div>
+              <div class="work-media__half">
+                <div class="work-media__label">After</div>
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6d8?auto=format&fit=crop&w=900&q=60" alt="After cleaning - bathroom" />
+              </div>
+            </div>
+
+            <div class="work-body">
+              <div class="work-top">
+                <span class="badge badge--outline">Move-Out</span>
+                <span class="muted work-meta">Washroom • 1.5 hrs</span>
+              </div>
+              <h3 class="work-title">Inspection-ready washroom</h3>
+              <p class="muted work-desc">Toilet sanitized, mirror streak-free, tub corners reset.</p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="work-card" data-work-tag="regular">
+            <div class="work-media">
+              <div class="work-media__half">
+                <div class="work-media__label">Before</div>
+                <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=900&q=60" alt="Before cleaning - living room" />
+              </div>
+              <div class="work-media__half">
+                <div class="work-media__label">After</div>
+                <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&w=900&q=60" alt="After cleaning - living room" />
+              </div>
+            </div>
+
+            <div class="work-body">
+              <div class="work-top">
+                <span class="badge">Regular</span>
+                <span class="muted work-meta">Rooms • 1 hr</span>
+              </div>
+              <h3 class="work-title">Weekly tidy + floors</h3>
+              <p class="muted work-desc">Dust reset, vacuum edges, light touch-up on glass.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Optional: simple lightbox -->
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <div class="lightbox__backdrop" data-close="true"></div>
+        <div class="lightbox__card">
+          <button class="icon-btn" id="lightboxClose" type="button" aria-label="Close">✕</button>
+          <img id="lightboxImg" alt="" />
+        </div>
+      </div>
+
+      <section id="about" class="section">
+        <div class="about-grid">
+          <!-- Left: Story -->
+          <div class="about-card">
+            <div class="about-card__top">
+              <h2>About</h2>
+              <span class="badge badge--outline">Local • Reliable • Detail-first</span>
+            </div>
+
+            <p class="muted about-lead">
+              We help busy homes feel reset again—without the stress.
+              Our focus is consistency, clear expectations, and a clean you can actually see.
+            </p>
+
+            <div class="about-block">
+              <h3 class="about-h3">What we’re about</h3>
+              <p class="muted">
+                We follow a simple system: protect surfaces, work top-to-bottom, and finish with floors + high-touch points.
+                Whether it’s weekly upkeep, deep cleaning, or a move-out turnover, we aim for that “walk in and exhale” result.
+              </p>
+            </div>
+
+            <div class="about-block">
+              <h3 class="about-h3">How we work</h3>
+              <ul class="about-list">
+                <li><span class="dot" aria-hidden="true"></span><span>Clear checklist per service level (General / Deep / Move-In / Move-Out).</span></li>
+                <li><span class="dot" aria-hidden="true"></span><span>Fresh towels per home + color-coded zones to reduce cross-contamination.</span></li>
+                <li><span class="dot" aria-hidden="true"></span><span>Quick estimate ranges—final quote depends on size + condition.</span></li>
+              </ul>
+            </div>
+
+            <div class="about-cta">
+              <button class="btn btn--ghost" type="button" id="aboutEstimateBtn">Get a quick estimate</button>
+              <a class="btn btn--solid" href="#contact">Book / Ask a question</a>
+            </div>
+          </div>
+
+          <!-- Right: Trust cards -->
+          <div class="about-side">
+            <article class="mini-card">
+              <div class="mini-card__icon" aria-hidden="true">🛡️</div>
+              <div>
+                <div class="mini-card__title">Insured & careful</div>
+                <div class="muted mini-card__text">We treat your space like it’s ours—especially around delicate surfaces.</div>
+              </div>
+            </article>
+
+            <article class="mini-card">
+              <div class="mini-card__icon" aria-hidden="true">🧼</div>
+              <div>
+                <div class="mini-card__title">Supplies included</div>
+                <div class="muted mini-card__text">We bring the basics. Let us know if you prefer specific products.</div>
+              </div>
+            </article>
+
+            <article class="mini-card">
+              <div class="mini-card__icon" aria-hidden="true">✅</div>
+              <div>
+                <div class="mini-card__title">Satisfaction focus</div>
+                <div class="muted mini-card__text">Clear scope + clear finish. If something’s missed, tell us quickly.</div>
+              </div>
+            </article>
+
+            <div class="note-stack">
+              <p class="note">✅ Transparent scope: you pick tasks per room.</p>
+              <p class="note">✅ Great for rentals, families, and busy schedules.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="section-head">
+          <div>
+            <h2>Contact</h2>
+            <p class="muted">Tell us what you need and we’ll reply with a time + price range.</p>
+          </div>
+          <a class="btn btn--ghost" href="tel:+12045551234">Call Candy: (204) 555-1234</a>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Form -->
+          <form class="contact-card" id="contactForm" name="contact" method="post" action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field">
+
+            <input type="hidden" name="form-name" value="contact"/>
+
+            <!-- honeypot (spam)-->
+             <p class="sr-only">
+                <label> Don't fill this out: <input name="b-f" /> </label>
+             </p>
+            <div class="contact-row">
+              <label class="field">
+                <span>Full name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+
+              <label class="field">
+                <span>Phone</span>
+                <input type="tel" name="phone" placeholder="(204) 555-1234" />
+              </label>
+            </div>
+
+            <div class="contact-row">
+              <label class="field">
+                <span>Email</span>
+                <input type="email" name="email" placeholder="you@email.com" />
+              </label>
+
+              <label class="field">
+                <span>Service type</span>
+                <select name="service">
+                  <option value="regular">Regular cleaning</option>
+                  <option value="deep">Deep cleaning</option>
+                  <option value="move-in">Move-in</option>
+                  <option value="move-out">Move-out</option>
+                  <option value="carpet-couch">Carpet / couch</option>
+                </select>
+              </label>
+            </div>
+
+            <label class="field">
+              <span>What should we clean?</span>
+              <textarea name="message" rows="5" placeholder="Example: 2 bed, 1 bath, move-out. Focus on kitchen + washroom. Pets? Any special notes?"></textarea>
+            </label>
+
+            <div class="contact-pref">
+              <div class="muted" style="font-size:12px;">Preferred reply</div>
+              <div class="chip-row">
+                <button class="chip is-active" type="button" data-pref="text" aria-pressed="true">Text</button>
+                <button class="chip" type="button" data-pref="call" aria-pressed="false">Call</button>
+                <button class="chip" type="button" data-pref="email" aria-pressed="false">Email</button>
+              </div>
+              <input type="hidden" name="preferred" value="text" id="preferredInput" />
+            </div>
+
+            <div class="contact-actions">
+              <button class="btn btn--solid" type="submit" id="contactSubmit">Send message</button>
+              <button class="btn btn--ghost" type="reset">Clear</button>
+              <div class="muted contact-hint">No spam. We’ll only use your info to reply.</div>
+            </div>
+
+            <div class="contact-status" id="contactStatus" aria-live="polite"></div>
+          </form>
+
+          <!-- Info -->
+          <aside class="contact-side">
+            <div class="info-card">
+              <div class="info-card__title">Quick info</div>
+              <div class="info-list">
+                <div class="info-item">
+                  <div class="muted info-label">Phone</div>
+                  <div><a href="tel:+12045551234">(204) 555-1234</a></div>
+                </div>
+                <div class="info-item">
+                  <div class="muted info-label">Email</div>
+                  <div><a href="mailto:hello@candycleaning.ca">hello@candycleaning.ca</a></div>
+                </div>
+                <div class="info-item">
+                  <div class="muted info-label">Service area</div>
+                  <div>Winnipeg + nearby</div>
+                </div>
+                <div class="info-item">
+                  <div class="muted info-label">Hours</div>
+                  <div>Mon–Sat • 9am–6pm</div>
+                </div>
+              </div>
+
+              <div class="divider"></div>
+
+              <div class="muted" style="font-size:13px; line-height:1.4;">
+                For the fastest estimate, include: number of bedrooms/bathrooms, service type,
+                and any priority areas (kitchen, washroom, floors).
+              </div>
+            </div>
+
+            <div class="note-stack">
+              <p class="note">✅ Transparent scope: pick tasks per room.</p>
+              <p class="note">✅ We bring supplies (ask about preferences).</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

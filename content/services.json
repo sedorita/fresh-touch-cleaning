@@ -1,0 +1,613 @@
+{
+  "areas": [
+    {
+      "id": "kitchen",
+      "title": "Kitchen",
+      "subtitle": "Pick what you want done in this area.",
+      "image": "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=500&q=60",
+      "notes": [
+        "✅ We use fresh/clean towels per home.",
+        "✅ Color-coded towels help reduce cross-contamination risk."
+      ],
+      "categories": {
+        "general": [
+          {
+            "pick": "kitchen-clear-counters",
+            "text": "Clear small clutter from counters (as agreed)",
+            "previewMp4": "/previews/kitchen/General_wipe_counter_top.mp4"
+          },
+          {
+            "pick": "kitchen-counters",
+            "text": "Counters wiped + sanitized",
+            "previewMp4": "/previews/kitchen/General_counter_top_wiped.mp4"
+          },
+          {
+            "pick": "kitchen-backsplash-light",
+            "text": "Backsplash wiped (light)",
+            "previewMp4": "/previews/kitchen/BlackSplash%20video.mp4"
+          },
+          {
+            "pick": "kitchen-cabinet-faces-spot",
+            "text": "Cabinet faces/handles spot-cleaned (fingerprints)",
+            "previewMp4": "/previews/kitchen/General-cleaning_cabinets.mp4"
+          },
+          {
+            "pick": "kitchen-sink",
+            "text": "Sink + faucet polished",
+            "previewMp4": "/previews/kitchen/General-cleaning_Sink%26faucet.mp4"
+          },
+          {
+            "pick": "kitchen-stove",
+            "text": "Stovetop cleaned (light)",
+            "previewMp4": "/previews/kitchen/General-cleaning_stovetop-cleaned.mp4"
+          },
+          {
+            "pick": "kitchen-microwave-exterior",
+            "text": "Microwave exterior wiped",
+            "previewMp4": "/previews/kitchen/General-cleaning_microwave.mp4"
+          },
+          {
+            "pick": "kitchen-small-appliances",
+            "text": "Small appliances exterior wiped (if on counter)",
+            "previewMp4": "/previews/kitchen/General_counter_top_wiped.mp4"
+          },
+          {
+            "pick": "kitchen-table-chairs",
+            "text": "Table + chairs wiped",
+            "previewMp4": "/previews/kitchen/General_counter_top_wiped.mp4"
+          },
+          {
+            "pick": "kitchen-wall-spot-general",
+            "text": "Spot clean wall marks (light, near cooking areas)",
+            "previewMp4": "/previews/kitchen/General-cleaning_Kitchen-Wall.mp4"
+          },
+          {
+            "pick": "kitchen-trash",
+            "text": "Empty garbage + replace liner (if available)",
+            "previewMp4": "/previews/kitchen/General-cleaning_Kitchen-Wall.mp4"
+          },
+          {
+            "pick": "kitchen-floor-vac",
+            "text": "Sweep/vacuum floor edges + main floor",
+            "previewMp4": "/previews/kitchen/General-cleaning_kitchen-vaccum-floor.mp4"
+          },
+          {
+            "pick": "kitchen-floor-mop",
+            "text": "Mop floor (or spot mop if needed)",
+            "previewMp4": "/previews/kitchen/General-cleaning_kitchen_mopfloor2.mp4"
+          }
+        ],
+        "deep": [
+          {
+            "pick": "kitchen-deep-stove",
+            "text": "Degrease stovetop + knobs",
+            "previewMp4": "/previews/kitchen/General-oventop_scrubbing-showed.mp4"
+          },
+          {
+            "pick": "kitchen-inside-microwave",
+            "text": "Inside microwave cleaned",
+            "previewMp4": "/previews/kitchen/Deep-cleaning_microwave.mp4"
+          },
+          {
+            "pick": "kitchen-backsplash",
+            "text": "Backsplash scrubbed (stuck splatter)",
+            "previewMp4": "/previews/kitchen/BlackSplash%20video.mp4"
+          },
+          {
+            "pick": "kitchen-cabinet-faces-deep",
+            "text": "Cabinet faces cleaned more thoroughly (grease around handles)",
+            "previewMp4": "/previews/kitchen/General-cleaning_cabinets.mp4"
+          },
+          {
+            "pick": "kitchen-baseboards-deep",
+            "text": "Baseboards wiped (kitchen)",
+            "previewMp4": "/previews/kitchen/General-cleaning_Kitchen-Wall2%28picked%29.mp4"
+          },
+          {
+            "pick": "kitchen-doors-frames",
+            "text": "Door/door frame wipe (light)",
+            "previewMp4": "/previews/kitchen/General-cleaning_Kitchen-Wall2%28picked%29.mp4"
+          }
+        ],
+        "detailed": [
+          {
+            "pick": "kitchen-cabinet-edges",
+            "text": "Cabinet faces detailed (edges + grooves)",
+            "previewMp4": "/previews/kitchen/Cabinet%20video.mp4"
+          },
+          {
+            "pick": "kitchen-handles-detail",
+            "text": "Cabinet handles detailed",
+            "previewMp4": "/previews/kitchen/General-cleaning_cabinets.mp4"
+          },
+          {
+            "pick": "kitchen-appliance-fronts",
+            "text": "Appliance fronts detailed (fridge/stove front)",
+            "previewMp4": "/previews/kitchen/General_oven_top.mp4"
+          },
+          {
+            "pick": "kitchen-sink-crevices",
+            "text": "Corners/crevices around sink detailed",
+            "previewMp4": "/previews/kitchen/General-cleaning_Sink%26faucet.mp4"
+          },
+          {
+            "pick": "kitchen-switches-handles",
+            "text": "Light switches + door handles wiped",
+            "previewMp4": "/previews/kitchen/General-cleaning_Kitchen-Wall.mp4"
+          },
+          {
+            "pick": "kitchen-vents",
+            "text": "Vents detailed (wipe vs remove)",
+            "previewMp4": "/previews/kitchen/General-cleaning_Kitchen-Wall2%28picked%29.mp4"
+          },
+          {
+            "pick": "kitchen-baseboards",
+            "text": "Baseboards hand-wiped",
+            "previewMp4": "/previews/kitchen/General-cleaning_Kitchen-Wall2%28picked%29.mp4"
+          }
+        ],
+        "move-in": [
+          {
+            "pick": "kitchen-movein-ready",
+            "text": "Move-in ready wipe-down + sanitize",
+            "previewMp4": "/previews/kitchen/General_counter_top_wiped.mp4"
+          },
+          {
+            "pick": "kitchen-sink-disinfect",
+            "text": "Sink disinfected (sanitary wipe)",
+            "previewMp4": "/previews/kitchen/General-cleaning_Sink%26faucet.mp4"
+          },
+          {
+            "pick": "kitchen-cabinet-in",
+            "text": "Inside cabinets (light wipe, empty)",
+            "previewMp4": "/previews/kitchen/General-cleaning_cabinets.mp4"
+          },
+          {
+            "pick": "kitchen-fridge-front",
+            "text": "Fridge exterior cleaned",
+            "previewMp4": "/previews/kitchen/General_counter_top_wiped.mp4"
+          },
+          {
+            "pick": "kitchen-floor-mop-movein",
+            "text": "Floors vacuum/sweep + mop thoroughly",
+            "previewMp4": "/previews/kitchen/General-cleaning_kitchen_mopfloor3%28picked%29.mp4"
+          }
+        ],
+        "move-out": [
+          {
+            "pick": "kitchen-moveout-ready",
+            "text": "Move-out turnover clean (inspection focus)",
+            "previewMp4": "/previews/kitchen/General-cleaning_Kitchen-Wall.mp4"
+          },
+          {
+            "pick": "kitchen-inside-microwave-moveout",
+            "text": "Inside microwave cleaned (empty)",
+            "previewMp4": "/previews/kitchen/General-cleaning_microwave.mp4"
+          },
+          {
+            "pick": "kitchen-cabinets-inside",
+            "text": "Inside cabinets/drawers wiped (empty)",
+            "previewMp4": "/previews/kitchen/General-cleaning_cabinets.mp4"
+          },
+          {
+            "pick": "kitchen-inside-oven",
+            "text": "Inside oven (as booked)",
+            "previewMp4": "/previews/kitchen/General_oven_top.mp4"
+          },
+          {
+            "pick": "kitchen-inside-fridge",
+            "text": "Inside fridge (as booked)",
+            "previewMp4": "/previews/kitchen/General_oven_top.mp4"
+          },
+          {
+            "pick": "kitchen-walls-spot",
+            "text": "Wall spot-cleaning (traffic areas)",
+            "previewMp4": "/previews/kitchen/General-cleaning_Kitchen-Wall2%28picked%29.mp4"
+          },
+          {
+            "pick": "kitchen-floor-moveout",
+            "text": "Floors vacuum/sweep + mop thoroughly (edges)",
+            "previewMp4": "/previews/kitchen/General-cleaning_kitchen_mopfloor2.mp4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "washrooms",
+      "title": "Washrooms",
+      "subtitle": "Pick what you want done in this area.",
+      "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=500&q=60",
+      "notes": [
+        "✅ We use fresh/clean towels per home.",
+        "✅ Color-coded towels help reduce cross-contamination risk."
+      ],
+      "categories": {
+        "general": [
+          {
+            "pick": "bath-counter-sanitize",
+            "text": "Countertop wiped + sanitized",
+            "previewMp4": "/previews/bath-counter-sanitize.mp4"
+          },
+          {
+            "pick": "bath-sink",
+            "text": "Sink + faucet cleaned",
+            "previewMp4": "/previews/bath-sink.mp4"
+          },
+          {
+            "pick": "bath-mirror",
+            "text": "Mirror streak-free",
+            "previewMp4": "/previews/bath-mirror.mp4"
+          },
+          {
+            "pick": "bath-toilet",
+            "text": "Toilet cleaned + sanitized",
+            "previewMp4": "/previews/bath-toilet.mp4"
+          },
+          {
+            "pick": "bath-shower-light",
+            "text": "Tub/shower wiped (light)",
+            "previewMp4": "/previews/bath-shower-light.mp4"
+          },
+          {
+            "pick": "bath-cabinet-spot",
+            "text": "Cabinet faces/handles spot-cleaned",
+            "previewMp4": "/previews/bath-cabinet-spot.mp4"
+          },
+          {
+            "pick": "bath-trash",
+            "text": "Empty trash + replace liner (if available)",
+            "previewMp4": "/previews/trash-bag.mp4"
+          },
+          {
+            "pick": "bath-tidy",
+            "text": "Quick tidy (align items, fold towels)",
+            "previewMp4": "/previews/bath-tidy.mp4"
+          },
+          {
+            "pick": "bath-floor-vac",
+            "text": "Sweep/vacuum floor",
+            "previewMp4": "/previews/bath-floor-vac.mp4"
+          },
+          {
+            "pick": "bath-floor-mop",
+            "text": "Mop floor",
+            "previewMp4": "/previews/bath-floor-mop.mp4"
+          }
+        ],
+        "deep": [
+          {
+            "pick": "bath-shower-wall",
+            "text": "Tub/shower scrubbed (corners + buildup)",
+            "previewMp4": "/previews/bath-shower.mp4"
+          },
+          {
+            "pick": "bath-grout",
+            "text": "Grout/edges scrubbed (light where buildup shows)",
+            "previewMp4": "/previews/bath-grout.mp4"
+          },
+          {
+            "pick": "bath-behind-toilet",
+            "text": "Around/behind toilet cleaned (as reachable)",
+            "previewMp4": "/previews/bath-behind-toilet.mp4"
+          },
+          {
+            "pick": "bath-faucet-base",
+            "text": "Faucet base + drain area detailed",
+            "previewMp4": "/previews/bath-faucet-base.mp4"
+          },
+          {
+            "pick": "bath-baseboards",
+            "text": "Baseboards hand-wiped",
+            "previewMp4": "/previews/bath-baseboards.mp4"
+          }
+        ],
+        "detailed": [
+          {
+            "pick": "bath-tracks",
+            "text": "Shower door tracks detailed",
+            "previewMp4": "/previews/bath-tracks.mp4"
+          },
+          {
+            "pick": "bath-polish-chrome",
+            "text": "Polish chrome fixtures (finish)",
+            "previewMp4": "/previews/bath-polish.mp4"
+          },
+          {
+            "pick": "bath-toilet-hinges",
+            "text": "Toilet hinges + tight areas detailed",
+            "previewMp4": "/previews/bath-toilet-hinges.mp4"
+          },
+          {
+            "pick": "bath-vents",
+            "text": "Vent detailing (wipe vs remove)",
+            "previewMp4": "/previews/bath-vents.mp4"
+          },
+          {
+            "pick": "bath-under-rim",
+            "text": "Under-rim detailing",
+            "previewMp4": "/previews/bath-under-rim.mp4"
+          }
+        ],
+        "move-in": [
+          {
+            "pick": "bath-movein-reset",
+            "text": "Move-in reset cleaning + sanitize",
+            "previewMp4": "/previews/bath-movein.mp4"
+          },
+          {
+            "pick": "bath-cabinet-in",
+            "text": "Inside vanity/drawers (light wipe, empty)",
+            "previewMp4": "/previews/bath-vanity-inside.mp4"
+          },
+          {
+            "pick": "bath-finish",
+            "text": "Final polish finish",
+            "previewMp4": "/previews/bath-finish.mp4"
+          },
+          {
+            "pick": "bath-floor-movein",
+            "text": "Floors sweep/vac + mop thoroughly",
+            "previewMp4": "/previews/bath-floor-mop.mp4"
+          }
+        ],
+        "move-out": [
+          {
+            "pick": "bath-moveout-detail",
+            "text": "Move-out detailing (inspection focus)",
+            "previewMp4": "/previews/bath-moveout.mp4"
+          },
+          {
+            "pick": "bath-vanity-inside-empty",
+            "text": "Inside vanity/drawers wiped (empty)",
+            "previewMp4": "/previews/bath-vanity-inside.mp4"
+          },
+          {
+            "pick": "bath-walls-spot",
+            "text": "Wall spot-cleaning",
+            "previewMp4": "/previews/bath-wall-spot.mp4"
+          },
+          {
+            "pick": "bath-inspection",
+            "text": "Inspection-ready finish",
+            "previewMp4": "/previews/bath-inspection.mp4"
+          }
+        ],
+        "post": [
+          {
+            "pick": "bath-dust-control",
+            "text": "Construction dust wipe-down",
+            "previewMp4": "/previews/post-dust.mp4"
+          },
+          {
+            "pick": "bath-fine-dust",
+            "text": "Fine dust finishing",
+            "previewMp4": "/previews/post-fine-dust.mp4"
+          },
+          {
+            "pick": "bath-edges",
+            "text": "Edges/trim wiped",
+            "previewMp4": "/previews/post-edges.mp4"
+          }
+        ],
+        "carpet": [
+          {
+            "pick": "bath-mat-spot",
+            "text": "Bath mat spot-treatment",
+            "previewMp4": "/previews/carpet-mat-spot.mp4"
+          },
+          {
+            "pick": "bath-upholstery",
+            "text": "Upholstery add-on (as booked)",
+            "previewMp4": "/previews/upholstery.mp4"
+          },
+          {
+            "pick": "bath-deodorize",
+            "text": "Deodorize (as available)",
+            "previewMp4": "/previews/deodorize.mp4"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rooms",
+      "title": "Rooms",
+      "subtitle": "Pick what you want done in this area.",
+      "image": "https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=500&q=60",
+      "notes": [
+        "✅ We use fresh/clean towels per home.",
+        "✅ Color-coded towels help reduce cross-contamination risk."
+      ],
+      "categories": {
+        "general": [
+          {
+            "pick": "rooms-dusting",
+            "text": "Dust accessible surfaces (tables, shelves, ledges)",
+            "previewMp4": "/previews/rooms-dusting.mp4"
+          },
+          {
+            "pick": "rooms-electronics-dust",
+            "text": "Dust electronics lightly (TV stand/console)",
+            "previewMp4": "/previews/rooms-electronics.mp4"
+          },
+          {
+            "pick": "rooms-high-touch",
+            "text": "Wipe high-touch points (handles/switches if included)",
+            "previewMp4": "/previews/rooms-high-touch.mp4"
+          },
+          {
+            "pick": "rooms-tidy",
+            "text": "Tidy / straighten (pillows, blankets, light reset)",
+            "previewMp4": "/previews/rooms-tidy.mp4"
+          },
+          {
+            "pick": "rooms-glass-spot",
+            "text": "Spot clean glass/mirrors (fingerprints)",
+            "previewMp4": "/previews/rooms-glass.mp4"
+          },
+          {
+            "pick": "rooms-vac",
+            "text": "Vacuum carpets/rugs (including edges when possible)",
+            "previewMp4": "/previews/rooms-vacuum.mp4"
+          },
+          {
+            "pick": "rooms-sweep",
+            "text": "Sweep hard floors",
+            "previewMp4": "/previews/rooms-sweep.mp4"
+          },
+          {
+            "pick": "rooms-mop",
+            "text": "Mop hard floors (or spot mop)",
+            "previewMp4": "/previews/rooms-mop.mp4"
+          },
+          {
+            "pick": "rooms-trash",
+            "text": "Empty small trash bins (if present)",
+            "previewMp4": "/previews/trash-bag.mp4"
+          },
+          {
+            "pick": "rooms-final-reset",
+            "text": "Final reset (neat finish)",
+            "previewMp4": "/previews/rooms-final-reset.mp4"
+          }
+        ],
+        "deep": [
+          {
+            "pick": "rooms-high-dust",
+            "text": "Dust higher surfaces (reachable with duster)",
+            "previewMp4": "/previews/rooms-high-dust.mp4"
+          },
+          {
+            "pick": "rooms-baseboards",
+            "text": "Baseboards hand-wiped",
+            "previewMp4": "/previews/rooms-baseboards.mp4"
+          },
+          {
+            "pick": "rooms-doors",
+            "text": "Doors + handles wiped",
+            "previewMp4": "/previews/rooms-doors.mp4"
+          },
+          {
+            "pick": "rooms-window-sill",
+            "text": "Window sills/ledges cleaned (interior surface)",
+            "previewMp4": "/previews/rooms-sills.mp4"
+          },
+          {
+            "pick": "rooms-vac-edges",
+            "text": "Vacuum edges more thoroughly",
+            "previewMp4": "/previews/rooms-vac-edges.mp4"
+          }
+        ],
+        "detailed": [
+          {
+            "pick": "rooms-trim-detailed",
+            "text": "Trim/baseboards detailed (touch every line)",
+            "previewMp4": "/previews/rooms-trim-detailed.mp4"
+          },
+          {
+            "pick": "rooms-switches-handles",
+            "text": "High-touch points detailed (switches/handles)",
+            "previewMp4": "/previews/rooms-switches.mp4"
+          },
+          {
+            "pick": "rooms-sills-detailed",
+            "text": "Window sills detailed",
+            "previewMp4": "/previews/rooms-sills.mp4"
+          },
+          {
+            "pick": "rooms-vents",
+            "text": "Vents detailed (wipe vs remove)",
+            "previewMp4": "/previews/rooms-vents.mp4"
+          },
+          {
+            "pick": "rooms-tracks",
+            "text": "Closet/door tracks detailed",
+            "previewMp4": "/previews/rooms-tracks.mp4"
+          },
+          {
+            "pick": "rooms-corners",
+            "text": "Corners/edges detailed",
+            "previewMp4": "/previews/rooms-corners.mp4"
+          }
+        ],
+        "move-in": [
+          {
+            "pick": "rooms-movein-reset",
+            "text": "Move-in reset clean (ready-to-live)",
+            "previewMp4": "/previews/rooms-movein.mp4"
+          },
+          {
+            "pick": "rooms-closet-light",
+            "text": "Inside closets (light wipe, empty)",
+            "previewMp4": "/previews/rooms-closet.mp4"
+          },
+          {
+            "pick": "rooms-floor-movein",
+            "text": "Floors vacuum/sweep + mop thoroughly",
+            "previewMp4": "/previews/rooms-mop.mp4"
+          },
+          {
+            "pick": "rooms-final",
+            "text": "Final touch-up",
+            "previewMp4": "/previews/rooms-final.mp4"
+          }
+        ],
+        "move-out": [
+          {
+            "pick": "rooms-moveout-detail",
+            "text": "Move-out detailing (turnover/inspection)",
+            "previewMp4": "/previews/rooms-moveout.mp4"
+          },
+          {
+            "pick": "rooms-baseboards-moveout",
+            "text": "Baseboards wiped (visible dirt lines)",
+            "previewMp4": "/previews/rooms-baseboards.mp4"
+          },
+          {
+            "pick": "rooms-walls-spot",
+            "text": "Wall spot-cleaning (traffic areas)",
+            "previewMp4": "/previews/rooms-walls.mp4"
+          },
+          {
+            "pick": "rooms-inspection",
+            "text": "Inspection-ready finish",
+            "previewMp4": "/previews/rooms-inspection.mp4"
+          }
+        ],
+        "post": [
+          {
+            "pick": "rooms-dust-control",
+            "text": "Construction dust wipe-down",
+            "previewMp4": "/previews/post-dust.mp4"
+          },
+          {
+            "pick": "rooms-fine-dust",
+            "text": "Fine dust finishing",
+            "previewMp4": "/previews/post-fine-dust.mp4"
+          },
+          {
+            "pick": "rooms-trim",
+            "text": "Trim/edges wiped",
+            "previewMp4": "/previews/post-trim.mp4"
+          }
+        ],
+        "carpet": [
+          {
+            "pick": "rooms-carpet-spot",
+            "text": "Carpet spot-treatment",
+            "previewMp4": "/previews/carpet-spot.mp4"
+          },
+          {
+            "pick": "rooms-couch",
+            "text": "Couch/sofa refresh",
+            "previewMp4": "/previews/upholstery-couch.mp4"
+          },
+          {
+            "pick": "rooms-deodorize",
+            "text": "Deodorize (as available)",
+            "previewMp4": "/previews/deodorize.mp4"
+          }
+        ]
+      }
+    }
+  ]
+}
