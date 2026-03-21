@@ -399,6 +399,9 @@ function renderServiceAreas(data) {
   }).join("");
 }
 
+
+
+
 /* =========================
    Main wiring
    ========================= */
@@ -493,14 +496,61 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 // Recent Work 
 // Recent Work: filters
-(function initRecentWork(){
+
+function renderRecentWork(data) {
+  const workGrid = document.getElementById("workGrid");
+  if (!workGrid) return false;
+
+  if (!data || !Array.isArray(data.items) || data.items.length === 0) {
+    return false;
+  }
+
+  workGrid.innerHTML = data.items.map(item => {
+    const badgeClass = item.tag === "move-out" ? "badge badge--outline" : "badge";
+
+    return `
+      <article class="work-card" data-work-tag="${item.tag}">
+        <div class="work-media">
+          <div class="work-media__half">
+            <div class="work-media__label">Before</div>
+            <img src="${item.beforeImage}" alt="${item.beforeAlt || "Before image"}" />
+          </div>
+          <div class="work-media__half">
+            <div class="work-media__label">After</div>
+            <img src="${item.afterImage}" alt="${item.afterAlt || "After image"}" />
+          </div>
+        </div>
+
+        <div class="work-body">
+          <div class="work-top">
+            <span class="${badgeClass}">${item.badge}</span>
+            <span class="muted work-meta">${item.meta}</span>
+          </div>
+          <h3 class="work-title">${item.title}</h3>
+          <p class="muted work-desc">${item.description}</p>
+        </div>
+      </article>
+    `;
+  }).join("");
+
+  return true;
+}
+
+
+async function loadRecentWork(path) {
+  const res = await fetch(path);
+  if (!res.ok) throw new Error(`Failed to load ${path}`);
+  return res.json();
+}
+
+function initRecentWork() {
   const chips = document.querySelectorAll("[data-work-filter]");
   const cards = document.querySelectorAll(".work-card");
   if (!chips.length || !cards.length) return;
 
   let active = "all";
 
-  function render(){
+  function render() {
     chips.forEach(btn => {
       const on = btn.dataset.workFilter === active;
       btn.classList.toggle("is-active", on);
@@ -509,7 +559,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     cards.forEach(card => {
       const tag = card.dataset.workTag;
-      const show = (active === "all") || (tag === active);
+      const show = active === "all" || tag === active;
       card.style.display = show ? "" : "none";
     });
   }
@@ -522,10 +572,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   });
 
   render();
-})();
+}
+
 
 // Optional Lightbox
-(function initLightbox(){
+function initLightbox(){load
   const box = document.querySelector("#lightbox");
   const img = document.querySelector("#lightboxImg");
   const closeBtn = document.querySelector("#lightboxClose");
@@ -560,7 +611,19 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") close();
   });
-})();
+}
+
+document.addEventListener("DOMContentLoaded", async ()=>{
+  
+  try{
+    const recentWork = await loadRecentWork("/content/recent-work.json"); 
+    renderRecentWork(recentWork);
+    initRecentWork(); 
+    initLightbox();
+  }catch(err){
+    console.error(err)
+  }
+})
 
 // About 
 //open Modal 

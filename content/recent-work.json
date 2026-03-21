@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": "kitchen-grease-reset",
+      "tag": "deep",
+      "badge": "Deep",
+      "meta": "Kitchen • 2 hrs",
+      "title": "Grease reset + shine finish",
+      "description": "Counters sanitized, sink polished, backsplash scrubbed.",
+      "beforeImage": "https://images.unsplash.com/photo-1581579185169-7b76b9948b56?auto=format&fit=crop&w=900&q=60",
+      "beforeAlt": "Before cleaning - kitchen surface",
+      "afterImage": "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=60",
+      "afterAlt": "After cleaning - kitchen surface"
+    },
+    {
+      "id": "washroom-inspection-ready",
+      "tag": "move-out",
+      "badge": "Move-Out",
+      "meta": "Washroom • 1.5 hrs",
+      "title": "Inspection-ready washroom",
+      "description": "Toilet sanitized, mirror streak-free, tub corners reset.",
+      "beforeImage": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=60",
+      "beforeAlt": "Before cleaning - bathroom",
+      "afterImage": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6d8?auto=format&fit=crop&w=900&q=60",
+      "afterAlt": "After cleaning - bathroom"
+    },
+    {
+      "id": "rooms-weekly-tidy",
+      "tag": "regular",
+      "badge": "Regular",
+      "meta": "Rooms • 1 hr",
+      "title": "Weekly tidy + floors",
+      "description": "Dust reset, vacuum edges, light touch-up on glass.",
+      "beforeImage": "https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=900&q=60",
+      "beforeAlt": "Before cleaning - living room",
+      "afterImage": "https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&w=900&q=60",
+      "afterAlt": "After cleaning - living room"
+    }
+  ]
+}
