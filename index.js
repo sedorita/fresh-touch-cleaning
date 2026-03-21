@@ -434,7 +434,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
    // Services (tabs + pick toggle + preview)
   try{
-    const servicesData = loadServicesData();
+    const servicesData = await loadServicesData();
+    console.log(servicesData)
     renderServiceAreas(servicesData)
     initServices();
   }catch(err){
