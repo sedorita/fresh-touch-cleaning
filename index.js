@@ -219,72 +219,104 @@ function initServices() {
   });
 
   function showPreviewForPick(pick) {
-    const mp4 = pick.dataset.previewMp4;
-    if (!mp4) return;
+    const enabled = pick.dataset.previewEnabled === "true";
+    const type = pick.dataset.previewType || "none";
+
+    if (!enabled || type === "none") {
+      hideSharedPreview();
+      return;
+    }
 
     const preview = document.querySelector("#servicesPreview");
-    const video = document.querySelector("#servicesPreviewVideo");
-    if (!preview || !video) return;
+    const media = document.querySelector("#servicesPreviewMedia");
+    if (!preview || !media) return;
 
     const pickRect = pick.getBoundingClientRect();
 
-    // show first so width/height can be measured
     preview.style.display = "block";
     preview.setAttribute("aria-hidden", "false");
     preview.style.pointerEvents = "none";
 
-    const gap = 12;
-    const viewportPad = 12;
+    media.innerHTML = "";
 
+    if (type === "video") {
+      const videoSrc = pick.dataset.previewVideo;
+      if (!videoSrc) {
+        hideSharedPreview();
+        return;
+      }
+
+      const video = document.createElement("video");
+      video.muted = true;
+      video.loop = true;
+      video.playsInline = true;
+      video.preload = "none";
+      video.src = videoSrc;
+      media.appendChild(video);
+      video.play().catch(() => {});
+    }
+
+    if (type === "beforeAfter") {
+      const before = pick.dataset.previewBefore;
+      const after = pick.dataset.previewAfter;
+
+      if (!before || !after) {
+        hideSharedPreview();
+        return;
+      }
+
+      media.innerHTML = `
+        <div class="services-preview__compare">
+          <div class="services-preview__pane">
+            <span class="services-preview__badge">Before</span>
+            <img src="${before}" alt="Before preview">
+          </div>
+          <div class="services-preview__pane">
+            <span class="services-preview__badge">After</span>
+            <img src="${after}" alt="After preview">
+          </div>
+        </div>
+      `;
+    }
+
+    const gap = 12;
+    const pad = 12;
     const previewWidth = preview.offsetWidth || 280;
     const previewHeight = preview.offsetHeight || 200;
 
-    // default: place below the pick, aligned with its left edge
     let left = pickRect.left;
     let top = pickRect.bottom + gap;
 
-    // if it overflows right side of screen, shift left
-    if (left + previewWidth > window.innerWidth - viewportPad) {
-      left = window.innerWidth - previewWidth - viewportPad;
+    if (left + previewWidth > window.innerWidth - pad) {
+      left = window.innerWidth - previewWidth - pad;
     }
 
-    // if it goes too far left, clamp
-    if (left < viewportPad) {
-      left = viewportPad;
-    }
+    if (left < pad) left = pad;
 
-    // if it overflows bottom, try placing above the pick
-    if (top + previewHeight > window.innerHeight - viewportPad) {
+    if (top + previewHeight > window.innerHeight - pad) {
       top = pickRect.top - previewHeight - gap;
     }
 
-    // if above also goes too high, clamp to viewport
-    if (top < viewportPad) {
-      top = viewportPad;
-    }
+    if (top < pad) top = pad;
 
     preview.style.left = `${left}px`;
     preview.style.top = `${top}px`;
-
-    const current = video.getAttribute("src");
-    if (current !== mp4) {
-      video.setAttribute("src", mp4);
-      video.load();
-    }
-
-    video.play().catch(() => {});
   }
 
   function hideSharedPreview() {
     const preview = document.querySelector("#servicesPreview");
-    const video = document.querySelector("#servicesPreviewVideo");
-    if (!preview || !video) return;
+    const media = document.querySelector("#servicesPreviewMedia");
+    if (!preview || !media) return;
 
+    const video = media.querySelector("video");
+    if (video) {
+      video.pause();
+      video.currentTime = 0;
+    }
+
+    media.innerHTML = "";
     preview.style.display = "none";
     preview.setAttribute("aria-hidden", "true");
-
-    video.pause();
-    video.currentTime = 0;
   }
 
 
@@ -309,18 +341,31 @@ function renderServiceAreas(data) {
     const categoryLists = Object.entries(area.categories).map(([category, items], index) => {
       const hiddenClass = index === 0 ? "" : " is-hidden";
 
-      const listItems = items.map(item => `
-        <li>
-          <button
-            class="pick"
-            type="button"
-            data-pick="${item.pick}"
-            data-preview-mp4="${item.previewMp4}">
-            <span class="dot" aria-hidden="true"></span>
-            <span class="pick__text">${item.text}</span>
-          </button>
-        </li>
-      `).join("");
+      const listItems = items.map(item => {
+        const preview = item.preview || {};
+        const previewEnabled = preview.enabled === true;
+        const previewType = preview.type || "none";
+        const previewVideo = preview.videoMp4 || "";
+        const previewBefore = preview.beforeImage || "";
+        const previewAfter = preview.afterImage || "";
+
+        return `
+          <li>
+            <button
+              class="pick"
+              type="button"
+              data-pick="${item.pick}"
+              data-preview-enabled="${previewEnabled}"
+              data-preview-type="${previewType}"
+              data-preview-video="${previewVideo}"
+              data-preview-before="${previewBefore}"
+              data-preview-after="${previewAfter}">
+              <span class="dot" aria-hidden="true"></span>
+              <span class="pick__text">${item.text}</span>
+            </button>
+          </li>
+        `;
+      }).join("");
 
       return `
         <ul class="pick-list${hiddenClass}" data-category-list="${category}">

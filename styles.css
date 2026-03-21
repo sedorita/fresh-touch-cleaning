@@ -489,13 +489,49 @@ a{ color: inherit; text-decoration: none; }
   border-bottom: 1px solid rgba(255,255,255,0.10);
 }
 
-.services-preview__video{
+.services-preview__media{
   width: 100%;
   height: 160px;
-  display: block;
-  object-fit: cover;
   background: rgba(0,0,0,0.4);
 }
+
+.services-preview__media video,
+.services-preview__media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.services-preview__compare{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+  gap: 1px;
+  background: rgba(255,255,255,0.08);
+}
+
+.services-preview__pane{
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.services-preview__badge{
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.18);
+  backdrop-filter: blur(6px);
+}
+
+
 .section-head{
   display:flex;
   align-items:flex-start;
