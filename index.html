@@ -966,6 +966,16 @@
       </section>
     </main>
 
+    <script>
+      if (
+        location.hash.includes("invite_token=") ||
+        location.hash.includes("recovery_token=") ||
+        location.hash.includes("confirmation_token=")
+      ) {
+        window.location.replace("/admin/" + location.hash);
+      }
+    </script>
+
     <script src="index.js"></script>
   </body>
 </html>
