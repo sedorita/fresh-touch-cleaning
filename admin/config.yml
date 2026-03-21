@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "media/uploads"
+public_folder: "/media/uploads"
 
 collections:
   - name: "services"
@@ -58,7 +58,7 @@ collections:
                               - { label: "Video", value: "video" }
                               - { label: "Before / After Images", value: "beforeAfter" }
 
-                          - { label: "Video MP4", name: "videoMp4", widget: "string", required: false }
+                          - { label: "Video MP4", name: "videoMp4", widget: "file", required: false }
                           - { label: "Before image", name: "beforeImage", widget: "image", required: false }
                           - { label: "After image", name: "afterImage", widget: "image", required: false }
 
