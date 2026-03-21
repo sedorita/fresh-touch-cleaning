@@ -15,7 +15,7 @@
             "pick": "kitchen-clear-counters",
             "text": "Clear small clutter from counters (as agreed)",
             "preview": {
-              "enabled": true,
+              "enabled": false,
               "type": "video",
               "videoMp4": "/previews/kitchen/General_wipe_counter_top.mp4"
             }
@@ -378,184 +378,286 @@
           {
             "pick": "bath-counter-sanitize",
             "text": "Countertop wiped + sanitized",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-sink",
             "text": "Sink + faucet cleaned",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-mirror",
             "text": "Mirror streak-free",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-toilet",
             "text": "Toilet cleaned + sanitized",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-shower-light",
             "text": "Tub/shower wiped (light)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-cabinet-spot",
             "text": "Cabinet faces/handles spot-cleaned",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-trash",
             "text": "Empty trash + replace liner (if available)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-tidy",
             "text": "Quick tidy (align items, fold towels)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-floor-vac",
             "text": "Sweep/vacuum floor",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-floor-mop",
             "text": "Mop floor",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           }
         ],
         "deep": [
           {
             "pick": "bath-shower-wall",
             "text": "Tub/shower scrubbed (corners + buildup)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-grout",
             "text": "Grout/edges scrubbed (light where buildup shows)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-behind-toilet",
             "text": "Around/behind toilet cleaned (as reachable)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-faucet-base",
             "text": "Faucet base + drain area detailed",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-baseboards",
             "text": "Baseboards hand-wiped",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           }
         ],
         "detailed": [
           {
             "pick": "bath-tracks",
             "text": "Shower door tracks detailed",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-polish-chrome",
             "text": "Polish chrome fixtures (finish)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-toilet-hinges",
             "text": "Toilet hinges + tight areas detailed",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-vents",
             "text": "Vent detailing (wipe vs remove)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-under-rim",
             "text": "Under-rim detailing",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           }
         ],
         "move-in": [
           {
             "pick": "bath-movein-reset",
             "text": "Move-in reset cleaning + sanitize",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-cabinet-in",
             "text": "Inside vanity/drawers (light wipe, empty)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-finish",
             "text": "Final polish finish",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-floor-movein",
             "text": "Floors sweep/vac + mop thoroughly",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           }
         ],
         "move-out": [
           {
             "pick": "bath-moveout-detail",
             "text": "Move-out detailing (inspection focus)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-vanity-inside-empty",
             "text": "Inside vanity/drawers wiped (empty)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-walls-spot",
             "text": "Wall spot-cleaning",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-inspection",
             "text": "Inspection-ready finish",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           }
         ],
         "post": [
           {
             "pick": "bath-dust-control",
             "text": "Construction dust wipe-down",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-fine-dust",
             "text": "Fine dust finishing",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-edges",
             "text": "Edges/trim wiped",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           }
         ],
         "carpet": [
           {
             "pick": "bath-mat-spot",
             "text": "Bath mat spot-treatment",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-upholstery",
             "text": "Upholstery add-on (as booked)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "bath-deodorize",
             "text": "Deodorize (as available)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           }
         ]
       }
@@ -574,189 +676,294 @@
           {
             "pick": "rooms-dusting",
             "text": "Dust accessible surfaces (tables, shelves, ledges)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-electronics-dust",
             "text": "Dust electronics lightly (TV stand/console)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-high-touch",
             "text": "Wipe high-touch points (handles/switches if included)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-tidy",
             "text": "Tidy / straighten (pillows, blankets, light reset)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-glass-spot",
             "text": "Spot clean glass/mirrors (fingerprints)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-vac",
             "text": "Vacuum carpets/rugs (including edges when possible)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-sweep",
             "text": "Sweep hard floors",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-mop",
             "text": "Mop hard floors (or spot mop)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-trash",
             "text": "Empty small trash bins (if present)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-final-reset",
             "text": "Final reset (neat finish)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           }
         ],
         "deep": [
           {
             "pick": "rooms-high-dust",
             "text": "Dust higher surfaces (reachable with duster)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-baseboards",
             "text": "Baseboards hand-wiped",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-doors",
             "text": "Doors + handles wiped",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-window-sill",
             "text": "Window sills/ledges cleaned (interior surface)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-vac-edges",
             "text": "Vacuum edges more thoroughly",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           }
         ],
         "detailed": [
           {
             "pick": "rooms-trim-detailed",
             "text": "Trim/baseboards detailed (touch every line)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-switches-handles",
             "text": "High-touch points detailed (switches/handles)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-sills-detailed",
             "text": "Window sills detailed",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-vents",
             "text": "Vents detailed (wipe vs remove)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-tracks",
             "text": "Closet/door tracks detailed",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-corners",
             "text": "Corners/edges detailed",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           }
         ],
         "move-in": [
           {
             "pick": "rooms-movein-reset",
             "text": "Move-in reset clean (ready-to-live)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-closet-light",
             "text": "Inside closets (light wipe, empty)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-floor-movein",
             "text": "Floors vacuum/sweep + mop thoroughly",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-final",
             "text": "Final touch-up",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           }
         ],
         "move-out": [
           {
             "pick": "rooms-moveout-detail",
             "text": "Move-out detailing (turnover/inspection)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-baseboards-moveout",
             "text": "Baseboards wiped (visible dirt lines)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-walls-spot",
             "text": "Wall spot-cleaning (traffic areas)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-inspection",
             "text": "Inspection-ready finish",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           }
         ],
         "post": [
           {
             "pick": "rooms-dust-control",
             "text": "Construction dust wipe-down",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-fine-dust",
             "text": "Fine dust finishing",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-trim",
             "text": "Trim/edges wiped",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           }
         ],
         "carpet": [
           {
             "pick": "rooms-carpet-spot",
             "text": "Carpet spot-treatment",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-couch",
             "text": "Couch/sofa refresh",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           },
           {
             "pick": "rooms-deodorize",
             "text": "Deodorize (as available)",
-            "preview": { "enabled": false, "type": "none" }
+            "preview": {
+              "enabled": false,
+              "type": "none"
+            }
           }
         ]
       }
