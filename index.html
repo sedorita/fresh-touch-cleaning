@@ -30,7 +30,7 @@
         <a class="btn btn--ghost" href="tel:+12045551234" aria-label="Call us">
           Call us: (204) 555-1234
         </a>
-        <button class="btn btn--solid" id="loginBtn" type="button">Login</button>
+        <button class="btn btn--solid btn--muted" id="loginBtn" type="button">Login</button>
       </div>
     </div>
 
@@ -55,7 +55,7 @@
         <div class="mobile-menu__actions">
           <button class="btn btn--ghost" id="estimateBtnMobile" type="button">Quick Estimate</button>
           <a class="btn btn--ghost" href="tel:+12045551234">Call Candy</a>
-          <button class="btn btn--solid" id="loginBtnMobile" type="button">Login</button>
+          <button class="btn btn--solid btn--muted" id="loginBtnMobile" type="button">Login</button>
         </div>
       </div>
 
@@ -76,30 +76,58 @@
       <!-- Center Title -->
       <div class="hero__content" id="hero_content">
         <h1 class="hero__title">Fresh Touch Cleaning</h1>
-        <p class="hero__subtitle">Recreating A magic space that last</p>
+        <p class="hero__subtitle">
+          <span class="hero__subtitle-animated">
+            Recreating a magic space that lasts
+          </span>
+        </p>
       </div>
 
       <!-- Bottom-right chat -->
       <button class="chat-fab" id="chatFab" type="button" aria-expanded="false">
-        Let’s Chat!
+        <span class="chat-fab__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M5 6.5A3.5 3.5 0 0 1 8.5 3h7A3.5 3.5 0 0 1 19 6.5v5A3.5 3.5 0 0 1 15.5 15H11l-4 4v-4.2A3.5 3.5 0 0 1 5 11.5v-5Z"></path>
+          </svg>
+        </span>
+        <span class="chat-fab__text">Let’s Chat</span>
       </button>
+
 
       <section class="chat-widget" id="chatWidget" aria-hidden="true" aria-label="Chat widget">
         <div class="chat-widget__header">
-          <div>
-            <div class="chat-widget__title">Chat with us</div>
-            <div class="chat-widget__sub">Typically replies fast</div>
+          <div class="chat-widget__heading">
+            <div class="chat-widget__badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 6.5A3.5 3.5 0 0 1 8.5 3h7A3.5 3.5 0 0 1 19 6.5v5A3.5 3.5 0 0 1 15.5 15H11l-4 4v-4.2A3.5 3.5 0 0 1 5 11.5v-5Z"></path>
+              </svg>
+            </div>
+
+            <div>
+              <div class="chat-widget__title">Chat with us</div>
+              <div class="chat-widget__sub">Typically replies fast</div>
+            </div>
           </div>
+
           <button class="icon-btn" id="chatClose" type="button" aria-label="Close chat">✕</button>
         </div>
+
         <div class="chat-widget__body" id="chatBody">
           <div class="chat-bubble chat-bubble--them">
-            Hi! What kind of remodel are you thinking about?
+            Hi! What kind of cleaning are you looking for today?
           </div>
+
+          <!-- example user bubble later -->
+          <!--
+          <div class="chat-bubble chat-bubble--me">
+            I need a move-out cleaning for a 2 bed apartment.
+          </div>
+          -->
         </div>
+
         <form class="chat-widget__input" id="chatForm">
-          <input id="chatInput" type="text" placeholder="Type a message..." autocomplete="off"/>
-          <button class="btn btn--solid" type="submit">Send</button>
+          <input id="chatInput" type="text" placeholder="Type a message..." autocomplete="off" />
+          <button class="btn btn--solid chat-widget__send" type="submit">Send</button>
         </form>
       </section>
     </header>
@@ -679,101 +707,6 @@
         <div class="services-preview__media" id="servicesPreviewMedia"></div>
       </div>
 
-      <section id="work" class="section">
-        <div class="section-head">
-          <div>
-            <h2>Recent Work</h2>
-            <p class="muted">Real before/after snapshots (tap a card to enlarge).</p>
-          </div>
-
-          <div class="chip-row" role="tablist" aria-label="Recent work filters">
-            <button class="chip is-active" type="button" data-work-filter="all" aria-pressed="true">All</button>
-            <button class="chip" type="button" data-work-filter="regular" aria-pressed="false">Regular</button>
-            <button class="chip" type="button" data-work-filter="deep" aria-pressed="false">Deep</button>
-            <button class="chip" type="button" data-work-filter="move-out" aria-pressed="false">Move-Out</button>
-          </div>
-        </div>
-
-        <div class="work-grid" id="workGrid">
-          <!-- Card 1 -->
-          <article class="work-card" data-work-tag="deep">
-            <div class="work-media">
-              <div class="work-media__half">
-                <div class="work-media__label">Before</div>
-                <img src="https://images.unsplash.com/photo-1581579185169-7b76b9948b56?auto=format&fit=crop&w=900&q=60" alt="Before cleaning - kitchen surface" />
-              </div>
-              <div class="work-media__half">
-                <div class="work-media__label">After</div>
-                <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=60" alt="After cleaning - kitchen surface" />
-              </div>
-            </div>
-
-            <div class="work-body">
-              <div class="work-top">
-                <span class="badge">Deep</span>
-                <span class="muted work-meta">Kitchen • 2 hrs</span>
-              </div>
-              <h3 class="work-title">Grease reset + shine finish</h3>
-              <p class="muted work-desc">Counters sanitized, sink polished, backsplash scrubbed.</p>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="work-card" data-work-tag="move-out">
-            <div class="work-media">
-              <div class="work-media__half">
-                <div class="work-media__label">Before</div>
-                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=60" alt="Before cleaning - bathroom" />
-              </div>
-              <div class="work-media__half">
-                <div class="work-media__label">After</div>
-                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6d8?auto=format&fit=crop&w=900&q=60" alt="After cleaning - bathroom" />
-              </div>
-            </div>
-
-            <div class="work-body">
-              <div class="work-top">
-                <span class="badge badge--outline">Move-Out</span>
-                <span class="muted work-meta">Washroom • 1.5 hrs</span>
-              </div>
-              <h3 class="work-title">Inspection-ready washroom</h3>
-              <p class="muted work-desc">Toilet sanitized, mirror streak-free, tub corners reset.</p>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="work-card" data-work-tag="regular">
-            <div class="work-media">
-              <div class="work-media__half">
-                <div class="work-media__label">Before</div>
-                <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=900&q=60" alt="Before cleaning - living room" />
-              </div>
-              <div class="work-media__half">
-                <div class="work-media__label">After</div>
-                <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&w=900&q=60" alt="After cleaning - living room" />
-              </div>
-            </div>
-
-            <div class="work-body">
-              <div class="work-top">
-                <span class="badge">Regular</span>
-                <span class="muted work-meta">Rooms • 1 hr</span>
-              </div>
-              <h3 class="work-title">Weekly tidy + floors</h3>
-              <p class="muted work-desc">Dust reset, vacuum edges, light touch-up on glass.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Optional: simple lightbox -->
-      <div class="lightbox" id="lightbox" aria-hidden="true">
-        <div class="lightbox__backdrop" data-close="true"></div>
-        <div class="lightbox__card">
-          <button class="icon-btn" id="lightboxClose" type="button" aria-label="Close">✕</button>
-          <img id="lightboxImg" alt="" />
-        </div>
-      </div>
 
       <section id="about" class="section">
         <div class="about-grid">
@@ -781,7 +714,11 @@
           <div class="about-card">
             <div class="about-card__top">
               <h2>About</h2>
-              <span class="badge badge--outline">Local • Reliable • Detail-first</span>
+              <div class="about-trust-row">
+                <span class="about-chip">Local</span>
+                <span class="about-chip">Reliable</span>
+                <span class="about-chip">Detail-first</span>
+              </div>
             </div>
 
             <p class="muted about-lead">
@@ -846,13 +783,120 @@
         </div>
       </section>
 
+
+      <section id="work" class="section">
+        <div class="section-head">
+          <div>
+            <h2>Recent Work</h2>
+            <p class="muted">Real before/after snapshots (tap a card to enlarge).</p>
+          </div>
+
+          <div class="chip-row" role="tablist" aria-label="Recent work filters">
+            <button class="chip is-active" type="button" data-work-filter="all" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-work-filter="regular" aria-pressed="false">Regular</button>
+            <button class="chip" type="button" data-work-filter="deep" aria-pressed="false">Deep</button>
+            <button class="chip" type="button" data-work-filter="move-out" aria-pressed="false">Move-Out</button>
+          </div>
+        </div>
+
+        <div class="work-grid" id="workGrid">
+          <!-- Card 1 -->
+          <article class="work-card" data-work-tag="deep">
+            <div class="work-media">
+              <div class="work-media__half">
+                <div class="work-media__label">Before</div>
+                <img src="https://images.unsplash.com/photo-1581579185169-7b76b9948b56?auto=format&fit=crop&w=900&q=60" alt="Before cleaning - kitchen surface" />
+              </div>
+              <div class="work-media__half">
+                <div class="work-media__label">After</div>
+                <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=60" alt="After cleaning - kitchen surface" />
+              </div>
+            </div>
+
+            <div class="work-body">
+              <div class="work-top">
+                <span class="badge">Deep</span>
+                <div class="work-meta">
+                  <span class="work-meta__title">Kitchen</span>
+                  <span class="work-meta__time">• 2 hrs</span>
+                </div>
+                
+              </div>
+              <h3 class="work-title">Grease reset + shine finish</h3>
+              <p class="muted work-desc">Counters sanitized, sink polished, backsplash scrubbed.</p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="work-card" data-work-tag="move-out">
+            <div class="work-media">
+              <div class="work-media__half">
+                <div class="work-media__label work-media__label--before">Before</div>
+                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=900&q=60" alt="Before cleaning - bathroom" />
+              </div>
+              <div class="work-media__half">
+                <div class="work-media__label work-media__label--after">After</div>
+                <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6d8?auto=format&fit=crop&w=900&q=60" alt="After cleaning - bathroom" />
+              </div>
+            </div>
+
+            <div class="work-body">
+                           <div class="work-top">
+                <span class="badge">Move Out</span>
+                <div class="work-meta">
+                  <span class="work-meta__title">Washroom</span>
+                  <span class="work-meta__time">• 1.5 hrs</span>
+                </div>
+                
+              </div>
+              <h3 class="work-title">Inspection-ready washroom</h3>
+              <p class="muted work-desc">Toilet sanitized, mirror streak-free, tub corners reset.</p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="work-card" data-work-tag="regular">
+            <div class="work-media">
+              <div class="work-media__half">
+                <div class="work-media__label">Before</div>
+                <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?auto=format&fit=crop&w=900&q=60" alt="Before cleaning - living room" />
+              </div>
+              <div class="work-media__half">
+                <div class="work-media__label">After</div>
+                <img src="https://images.unsplash.com/photo-1505693314120-0d443867891c?auto=format&fit=crop&w=900&q=60" alt="After cleaning - living room" />
+              </div>
+            </div>
+
+            <div class="work-body">
+              <div class="work-top">
+                <span class="badge">Regular</span>
+                <span class="muted work-meta">Rooms • 1 hr</span>
+              </div>
+              <h3 class="work-title">Weekly tidy + floors</h3>
+              <p class="muted work-desc">Dust reset, vacuum edges, light touch-up on glass.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Optional: simple lightbox -->
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <div class="lightbox__backdrop" data-close="true"></div>
+        <div class="lightbox__card">
+          <button class="icon-btn" id="lightboxClose" type="button" aria-label="Close">✕</button>
+          <img id="lightboxImg" alt="" />
+        </div>
+      </div>
+
+
+
       <section id="contact" class="section">
         <div class="section-head">
           <div>
             <h2>Contact</h2>
             <p class="muted">Tell us what you need and we’ll reply with a time + price range.</p>
           </div>
-          <a class="btn btn--ghost" href="tel:+12045551234">Call Candy: (204) 555-1234</a>
+          <a class="btn btn--ghost" href="tel:+12045551234">Call: (204) 555-1234</a>
         </div>
 
         <div class="contact-grid">
@@ -920,33 +964,158 @@
           </form>
 
           <!-- Info -->
-          <aside class="contact-side">
+          <aside class="contact-side contact-side--decorated">
+            <div class="contact-art" aria-hidden="true">
+              <span class="contact-art__orb contact-art__orb--one"></span>
+              <span class="contact-art__orb contact-art__orb--two"></span>
+              <span class="contact-art__orb contact-art__orb--three"></span>
+
+              <svg class="contact-art__spark contact-art__spark--one" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z"></path>
+              </svg>
+
+              <svg class="contact-art__spark contact-art__spark--two" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8L12 2z"></path>
+              </svg>
+            </div>
+
             <div class="info-card">
-              <div class="info-card__title">Quick info</div>
+              <div class="info-card__title-row">
+                <span class="info-card__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v11a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 4 17.5v-11Z"></path>
+                    <path d="M8 9h8M8 12h8M8 15h5"></path>
+                  </svg>
+                </span>
+                <div class="info-card__title">Quick info</div>
+              </div>
+
               <div class="info-list">
                 <div class="info-item">
-                  <div class="muted info-label">Phone</div>
+                  <div class="muted info-label">
+                    <span class="info-inline-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M6 4h4l2 5-2.5 2.5a15 15 0 0 0 3 3L15 12l5 2v4a2 2 0 0 1-2 2C10.8 20 4 13.2 4 6a2 2 0 0 1 2-2Z"></path>
+                      </svg>
+                    </span>
+                    Phone
+                  </div>
                   <div><a href="tel:+12045551234">(204) 555-1234</a></div>
                 </div>
+
                 <div class="info-item">
-                  <div class="muted info-label">Email</div>
+                  <div class="muted info-label">
+                    <span class="info-inline-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M4 6h16v12H4z"></path>
+                        <path d="m5 7 7 6 7-6"></path>
+                      </svg>
+                    </span>
+                    Email
+                  </div>
                   <div><a href="mailto:hello@candycleaning.ca">hello@candycleaning.ca</a></div>
                 </div>
+
                 <div class="info-item">
-                  <div class="muted info-label">Service area</div>
+                  <div class="muted info-label">
+                    <span class="info-inline-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M12 21s6-5.2 6-11a6 6 0 1 0-12 0c0 5.8 6 11 6 11Z"></path>
+                        <circle cx="12" cy="10" r="2.2"></circle>
+                      </svg>
+                    </span>
+                    Service area
+                  </div>
                   <div>Winnipeg + nearby</div>
                 </div>
+
                 <div class="info-item">
-                  <div class="muted info-label">Hours</div>
+                  <div class="muted info-label">
+                    <span class="info-inline-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8"></circle>
+                        <path d="M12 7v5l3 2"></path>
+                      </svg>
+                    </span>
+                    Hours
+                  </div>
                   <div>Mon–Sat • 9am–6pm</div>
                 </div>
               </div>
 
               <div class="divider"></div>
 
-              <div class="muted" style="font-size:13px; line-height:1.4;">
+              <div class="muted info-card__hint">
                 For the fastest estimate, include: number of bedrooms/bathrooms, service type,
                 and any priority areas (kitchen, washroom, floors).
+              </div>
+            </div>
+
+            <div class="info-card info-card--guarantee">
+              <div class="info-card__title-row">
+                <span class="info-card__icon info-card__icon--accent" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M12 3 6 5.5V11c0 4.5 2.8 7.6 6 9 3.2-1.4 6-4.5 6-9V5.5L12 3Z"></path>
+                    <path d="m9.5 11.8 1.7 1.7 3.6-4"></path>
+                  </svg>
+                </span>
+                <div class="info-card__title">Our Satisfaction Guarantee</div>
+              </div>
+
+              <p class="muted info-card__intro">
+                We take pride in delivering a clean you can actually see. If something was missed
+                or a cleaned area did not meet expectations, let us know within 24 hours of your service.
+              </p>
+
+              <div class="divider"></div>
+
+              <div class="info-list guarantee-list">
+                <div class="info-item info-item--stacked">
+                  <div class="muted info-label info-label--spaced">
+                    <span class="info-inline-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M12 6v6l4 2"></path>
+                        <circle cx="12" cy="12" r="8"></circle>
+                      </svg>
+                    </span>
+                    24-hour touch-up
+                  </div>
+                  <div>
+                    We’ll gladly return to perform a complimentary touch-up for the specific area in question.
+                  </div>
+                </div>
+
+                <div class="info-item info-item--stacked">
+                  <div class="muted info-label info-label--spaced">
+                    <span class="info-inline-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M5 12h14"></path>
+                        <path d="m13 6 6 6-6 6"></path>
+                      </svg>
+                    </span>
+                    How it works
+                  </div>
+                  <div>
+                    Inspect your space shortly after the cleaning, then contact us by phone or email
+                    within the 24-hour window so we can make it right.
+                  </div>
+                </div>
+
+                <div class="info-item info-item--stacked">
+                  <div class="muted info-label info-label--spaced">
+                    <span class="info-inline-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="8"></circle>
+                        <path d="M12 8v4"></path>
+                        <circle cx="12" cy="16.2" r=".8"></circle>
+                      </svg>
+                    </span>
+                    Scope note
+                  </div>
+                  <div>
+                    This policy applies only to areas included in the original service scope.
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -958,7 +1127,56 @@
         </div>
       </section>
     </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__brand">
+          <div class="site-footer__logo">Fresh Touch Cleaning</div>
+          <p class="site-footer__text">
+            Reliable home cleaning in Winnipeg with clear scope, careful details,
+            and a clean you can actually see.
+          </p>
+        </div>
 
+        <div class="site-footer__col">
+          <h3 class="site-footer__heading">Quick links</h3>
+          <ul class="site-footer__links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Plans</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Recent work</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h3 class="site-footer__heading">Contact</h3>
+          <ul class="site-footer__links">
+            <li><a href="tel:+12045551234">(204) 555-1234</a></li>
+            <li><a href="mailto:hello@candycleaning.ca">hello@candycleaning.ca</a></li>
+            <li>Winnipeg + nearby</li>
+            <li>Mon–Sat • 9am–6pm</li>
+          </ul>
+        </div>
+
+        <div class="site-footer__col">
+          <h3 class="site-footer__heading">Service notes</h3>
+          <ul class="site-footer__links">
+            <li>General cleaning</li>
+            <li>Deep cleaning</li>
+            <li>Move-in / move-out</li>
+            <li>Supplies included</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>© <span id="footerYear">2026</span> Fresh Touch Cleaning. All rights reserved.</p>
+        <div class="site-footer__bottom-links">
+          <a href="#contact">Book a cleaning</a>
+          <a href="#contact">Ask a question</a>
+        </div>
+      </div>
+    </footer>
     <script>
       if (
         location.hash.includes("invite_token=") ||

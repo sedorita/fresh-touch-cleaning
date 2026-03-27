@@ -6,7 +6,7 @@
 const $ = (sel) => document.querySelector(sel);
 
 function show(el){
-  el.style.display = "block";
+  el.style.display = "grid";
   el.setAttribute("aria-hidden", "false");
 }
 function hide(el){
@@ -74,7 +74,7 @@ function toggleMobileMenu(forceOpen = null) {
 
 // Login onclick only (no API)
 function handleLoginClick() {
-  alert("Login clicked (placeholder). Hook this to your real auth later.");
+  console.log("Login clicked (placeholder). Hook this to your real auth later.");
 }
 
 
@@ -483,7 +483,6 @@ document.addEventListener("DOMContentLoaded", async () => {
    // Services (tabs + pick toggle + preview)
   try{
     const servicesData = await loadServicesData();
-    console.log(servicesData)
     renderServiceAreas(servicesData)
     initServices();
   }catch(err){
@@ -497,6 +496,45 @@ document.addEventListener("DOMContentLoaded", async () => {
 // Recent Work 
 // Recent Work: filters
 
+// function renderRecentWork(data) {
+//   const workGrid = document.getElementById("workGrid");
+//   if (!workGrid) return false;
+
+//   if (!data || !Array.isArray(data.items) || data.items.length === 0) {
+//     return false;
+//   }
+
+//   workGrid.innerHTML = data.items.map(item => {
+//     const badgeClass = item.tag === "move-out" ? "badge badge--outline" : "badge";
+
+//     return `
+//       <article class="work-card" data-work-tag="${item.tag}">
+//         <div class="work-media">
+//           <div class="work-media__half">
+//             <div class="work-media__label">Before</div>
+//             <img src="${item.beforeImage}" alt="${item.beforeAlt || "Before image"}" />
+//           </div>
+//           <div class="work-media__half">
+//             <div class="work-media__label">After</div>
+//             <img src="${item.afterImage}" alt="${item.afterAlt || "After image"}" />
+//           </div>
+//         </div>
+
+//         <div class="work-body">
+//           <div class="work-top">
+//             <span class="${badgeClass}">${item.badge}</span>
+//             <span class="muted work-meta">${item.meta}</span>
+//           </div>
+//           <h3 class="work-title">${item.title}</h3>
+//           <p class="muted work-desc">${item.description}</p>
+//         </div>
+//       </article>
+//     `;
+//   }).join("");
+
+//   return true;
+// }
+
 function renderRecentWork(data) {
   const workGrid = document.getElementById("workGrid");
   if (!workGrid) return false;
@@ -505,37 +543,107 @@ function renderRecentWork(data) {
     return false;
   }
 
-  workGrid.innerHTML = data.items.map(item => {
-    const badgeClass = item.tag === "move-out" ? "badge badge--outline" : "badge";
+  const escapeHTML = (value = "") =>
+    String(value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
 
-    return `
-      <article class="work-card" data-work-tag="${item.tag}">
-        <div class="work-media">
-          <div class="work-media__half">
-            <div class="work-media__label">Before</div>
-            <img src="${item.beforeImage}" alt="${item.beforeAlt || "Before image"}" />
-          </div>
-          <div class="work-media__half">
-            <div class="work-media__label">After</div>
-            <img src="${item.afterImage}" alt="${item.afterAlt || "After image"}" />
-          </div>
-        </div>
+  const normalizeTag = (value = "") =>
+    String(value)
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, "-");
 
-        <div class="work-body">
-          <div class="work-top">
-            <span class="${badgeClass}">${item.badge}</span>
-            <span class="muted work-meta">${item.meta}</span>
+  const tagLabelFromValue = (tag = "") => {
+    const map = {
+      regular: "Regular",
+      deep: "Deep",
+      "move-out": "Move-Out",
+      "move-in": "Move-In",
+      "post-construction": "Post-Construction",
+      "carpet-upholstery": "Carpet & Upholstery"
+    };
+
+    const normalized = normalizeTag(tag);
+    return map[normalized] || String(tag || "").trim() || "Service";
+  };
+
+  const getMetaParts = (item) => {
+    if (item.area || item.duration) {
+      return {
+        area: item.area || "",
+        duration: item.duration || ""
+      };
+    }
+
+    if (item.meta) {
+      const parts = String(item.meta).split("•").map(part => part.trim());
+      return {
+        area: parts[0] || "",
+        duration: parts[1] || ""
+      };
+    }
+
+    return {
+      area: "",
+      duration: ""
+    };
+  };
+
+  workGrid.innerHTML = data.items
+    .map((item) => {
+      const tagValue = normalizeTag(item.tag || item.badge || "");
+      const tagLabel = escapeHTML(item.badge || tagLabelFromValue(item.tag));
+      const meta = getMetaParts(item);
+
+      const area = escapeHTML(meta.area);
+      const duration = escapeHTML(meta.duration);
+
+      const beforeAlt =
+        escapeHTML(item.beforeAlt) ||
+        `Before cleaning - ${escapeHTML(item.title || item.area || "service area")}`;
+
+      const afterAlt =
+        escapeHTML(item.afterAlt) ||
+        `After cleaning - ${escapeHTML(item.title || item.area || "service area")}`;
+
+      return `
+        <article class="work-card" data-work-tag="${escapeHTML(tagValue)}">
+          <div class="work-media">
+            <div class="work-media__half">
+              <div class="work-media__label work-media__label--before">Before</div>
+              <img src="${escapeHTML(item.beforeImage)}" alt="${beforeAlt}" />
+            </div>
+
+            <div class="work-media__half">
+              <div class="work-media__label work-media__label--after">After</div>
+              <img src="${escapeHTML(item.afterImage)}" alt="${afterAlt}" />
+            </div>
           </div>
-          <h3 class="work-title">${item.title}</h3>
-          <p class="muted work-desc">${item.description}</p>
-        </div>
-      </article>
-    `;
-  }).join("");
+
+          <div class="work-body">
+            <div class="work-top">
+              <span class="work-tag work-tag--${escapeHTML(tagValue)}">${tagLabel}</span>
+
+              <div class="work-meta">
+                ${area ? `<span class="work-meta__title">${area}</span>` : ""}
+                ${duration ? `<span class="work-meta__time">${duration}</span>` : ""}
+              </div>
+            </div>
+
+            <h3 class="work-title">${escapeHTML(item.title || "")}</h3>
+            <p class="work-desc muted">${escapeHTML(item.description || "")}</p>
+          </div>
+        </article>
+      `;
+    })
+    .join("");
 
   return true;
 }
-
 
 async function loadRecentWork(path) {
   const res = await fetch(path);
@@ -576,7 +684,7 @@ function initRecentWork() {
 
 
 // Optional Lightbox
-function initLightbox(){load
+function initLightbox(){
   const box = document.querySelector("#lightbox");
   const img = document.querySelector("#lightboxImg");
   const closeBtn = document.querySelector("#lightboxClose");
