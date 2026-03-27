@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+       <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>General Cleaning | Fresh Touch Cleaning</title>
+        <meta name="description" content="General cleaning in Winnipeg for kitchens, washrooms, rooms, and common areas." />
+
+    </head>
+
+<body data-service-slug="deep">
+  <main class="page">
+    <section class="section service-page">
+      <h1 id="serviceTitle"></h1>
+      <p id="serviceIntro"></p>
+      <p id="serviceDescription"></p>
+      <div id="serviceAreaGrid"></div>
+      <section class="cta-card">
+        <h2 id="ctaTitle"></h2>
+        <p id="ctaText"></p>
+      </section>
+    </section>
+  </main>
+
+  <script src="../service-page.js"></script>
+  <script>
+        (function redirectServicePageToHome() {
+        const fileToService = {
+            "general-cleaning.html": "general",
+            "deep-cleaning.html": "deep",
+            "detailed-cleaning.html": "detailed",
+            "move-in-cleaning.html": "move-in",
+            "move-out-cleaning.html": "move-out",
+            "post-construction-cleaning.html": "post",
+            "carpet-upholstery.html": "carpet"
+        };
+
+        const fileName = window.location.pathname.split("/").pop();
+        const service = fileToService[fileName];
+
+        if (!service) return;
+
+        window.location.replace(`../index.html?service=${encodeURIComponent(service)}#services`);
+        })();
+    </script>
+</body>
+</html>

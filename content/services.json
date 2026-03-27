@@ -1,4 +1,88 @@
 {
+
+  "servicePages": {
+    "general": {
+      "title": "General Cleaning",
+      "intro": "Reliable weekly or biweekly upkeep for kitchens, washrooms, and living spaces.",
+      "description": "General cleaning is built for consistent upkeep and a calmer, fresher home.",
+      "metaTitle": "General Cleaning | Fresh Touch Cleaning",
+      "metaDescription": "General cleaning in Winnipeg for kitchens, washrooms, rooms, and common areas.",
+      "heroImage": "/previews/service-general.jpg",
+      "heroImageAlt": "General home cleaning service",
+      "ctaTitle": "Need regular upkeep?",
+      "ctaText": "Tell us the size of the home and how often you want cleaning."
+    },
+    "move-in": {
+      "title": "Move-In Cleaning",
+      "intro": "A fresh start before furniture, groceries, and daily life move in.",
+      "description": "Move-in cleaning helps make the space feel ready before you settle in.",
+      "metaTitle": "Move-In Cleaning | Fresh Touch Cleaning",
+      "metaDescription": "Move-in cleaning in Winnipeg for kitchens, washrooms, and rooms before settling into your new home.",
+      "heroImage": "/previews/service-move-in.jpg",
+      "heroImageAlt": "Move-in ready cleaned space",
+      "ctaTitle": "Need the space ready before move-in day?",
+      "ctaText": "Tell us the size of the home, condition, and your target move-in date."
+    },
+    "deep": {
+      "title": "Deep Cleaning",
+      "intro": "A stronger reset for buildup, neglected corners, and spaces that need more than routine upkeep.",
+      "description": "Deep cleaning is for homes that need extra attention beyond standard upkeep, with more focus on grime, buildup, edges, and areas that get skipped during regular cleaning.",
+      "metaTitle": "Deep Cleaning | Fresh Touch Cleaning",
+      "metaDescription": "Deep cleaning in Winnipeg for kitchens, washrooms, and living spaces with extra focus on buildup, grime, and neglected areas.",
+      "heroImage": "/previews/service-deep.jpg",
+      "heroImageAlt": "Deep cleaning service in progress",
+      "ctaTitle": "Need a stronger reset?",
+      "ctaText": "Tell us the condition of the space, the problem areas, and whether this is a one-time clean or part of a reset plan."
+    },
+    "detailed": {
+      "title": "Detailed Cleaning",
+      "intro": "Precision-focused cleaning for edges, tracks, vents, trim, and the smaller details that change how a space feels.",
+      "description": "Detailed cleaning is built for the fine points of a space, where tighter lines, touch points, trim, and overlooked surfaces need more careful attention.",
+      "metaTitle": "Detailed Cleaning | Fresh Touch Cleaning",
+      "metaDescription": "Detailed cleaning in Winnipeg for trims, tracks, vents, handles, edges, and fine-detail surfaces throughout the home.",
+      "heroImage": "/previews/service-detailed.jpg",
+      "heroImageAlt": "Detailed surface cleaning service",
+      "ctaTitle": "Need the finer details handled?",
+      "ctaText": "Tell us which areas need precision cleaning, such as trim, vents, tracks, baseboards, or touch points."
+    },
+    "move-out": {
+      "title": "Move-Out Cleaning",
+      "intro": "Cleaning focused on handover, inspection readiness, and leaving the space in better shape.",
+      "description": "Move-out cleaning helps prepare the home for final walkthroughs, turnover, landlords, buyers, or incoming tenants by focusing on visible cleanliness and a more complete finish.",
+      "metaTitle": "Move-Out Cleaning | Fresh Touch Cleaning",
+      "metaDescription": "Move-out cleaning in Winnipeg for apartments and homes, designed for turnover, inspection readiness, and handover presentation.",
+      "heroImage": "/previews/service-move-out.jpg",
+      "heroImageAlt": "Move-out ready cleaned home",
+      "ctaTitle": "Need help before handover day?",
+      "ctaText": "Tell us the size of the space, its condition, and your move-out or inspection date for a quick estimate."
+    },
+    "post": {
+      "title": "Post-Construction Cleaning",
+      "intro": "Dust control and surface cleanup after renovation, repair work, or finishing projects.",
+      "description": "Post-construction cleaning is designed for homes and spaces left with fine dust, residue, and debris after renovation or repair work, helping the area feel usable again.",
+      "metaTitle": "Post-Construction Cleaning | Fresh Touch Cleaning",
+      "metaDescription": "Post-construction cleaning in Winnipeg for renovation dust, fine debris, and surface cleanup after repair or finishing work.",
+      "heroImage": "/previews/service-post-construction.jpg",
+      "heroImageAlt": "Post-construction cleaning and dust removal",
+      "ctaTitle": "Need renovation dust cleared out?",
+      "ctaText": "Tell us what work was done, how much dust is left behind, and which rooms need cleanup."
+    },
+    "carpet": {
+      "title": "Carpet & Upholstery Cleaning",
+      "intro": "Refresh soft surfaces by lifting dust, trapped dirt, and everyday buildup from fabric areas.",
+      "description": "Carpet and upholstery cleaning focuses on fabric-based surfaces that hold dirt, odor, dust, and everyday wear, helping them feel fresher and more renewed.",
+      "metaTitle": "Carpet & Upholstery Cleaning | Fresh Touch Cleaning",
+      "metaDescription": "Carpet and upholstery cleaning in Winnipeg for rugs, carpets, couches, and other fabric surfaces needing refresh and odor reduction.",
+      "heroImage": "/previews/service-carpet-upholstery.jpg",
+      "heroImageAlt": "Carpet and upholstery cleaning service",
+      "ctaTitle": "Need soft surfaces refreshed?",
+      "ctaText": "Tell us what needs attention, such as carpets, rugs, couches, or fabric seating, and whether there are spots, odors, or heavy-use areas."
+    }
+  },
+
+
+
+
   "areas": [
     {
       "id": "kitchen",

@@ -399,7 +399,30 @@ function renderServiceAreas(data) {
   }).join("");
 }
 
+function initMainPageNavRedirect() {
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest(
+      '.nav__link[href^="#"], .mobile-menu__link[href^="#"], .brand__name[href^="#"]'
+    );
 
+    if (!link) return;
+
+    const hash = link.getAttribute("href");
+    if (!hash) return;
+
+    const onMainPage =
+      window.location.pathname === "/" ||
+      window.location.pathname.endsWith("/index.html");
+
+    // Let normal anchor behavior work on the main page
+    if (onMainPage) return;
+
+    // On subpages like /services/move-in-cleaning.html,
+    // send the user back to the main page section
+    e.preventDefault();
+    window.location.href = `/${hash}`;
+  });
+}
 
 
 /* =========================
@@ -407,6 +430,7 @@ function renderServiceAreas(data) {
    ========================= */
 
 document.addEventListener("DOMContentLoaded", async () => {
+  initMainPageNavRedirect();
   // Estimate
   $("#estimateBtn")?.addEventListener("click", openModal);
   $("#estimateClose")?.addEventListener("click", closeModal);
@@ -470,6 +494,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     input.value = "";
     body.scrollTop = body.scrollHeight;
   });
+
 
   // Esc key closes modal/chat/mobile menu
   document.addEventListener("keydown", (e) => {
